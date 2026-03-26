@@ -1,0 +1,797 @@
+/* Fontes: carregadas em cada HTML (Google Fonts) */
+
+/* ——— Base (todos os slides de conteúdo) ——— */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slide-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.slide-container h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 48px;
+    color: #4ADE80;
+    margin-bottom: 20px;
+}
+
+.header:has(.subtitle) h2 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #A5A5A5;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* ——— Slide título (01) ——— */
+.slide--title * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slide--title {
+    justify-content: center;
+    align-items: center;
+}
+
+.slide--title .content-wrapper {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.slide--title h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 64px;
+    color: #4ADE80;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+.slide--title .subtitle {
+    font-size: 32px;
+    color: #A5A5A5;
+    margin-bottom: 24px;
+}
+
+.slide--title .prompt {
+    font-size: 24px;
+    color: #4ADE80;
+}
+
+.slide--title .cursor {
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    background-color: #4ADE80;
+    margin-left: 10px;
+    vertical-align: middle;
+    animation: slide-blink 1s step-end infinite;
+}
+
+@keyframes slide-blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.slide--title .decoration-bar {
+    position: absolute;
+    bottom: 24px;
+    width: 80%;
+    height: 4px;
+    background-color: #333;
+}
+
+.slide--title .decoration-bar .progress-fill {
+    width: 100%;
+    height: 100%;
+    background-color: #4ADE80;
+}
+
+/* ——— Slide conclusão (13) ——— */
+.slide--conclusion {
+    justify-content: center;
+    align-items: center;
+}
+
+.slide--conclusion .content-wrapper {
+    text-align: center;
+    width: 80%;
+}
+
+.slide--conclusion h2 {
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.slide--conclusion .final-message {
+    font-size: 28px;
+    color: #A5A5A5;
+    margin-bottom: 60px;
+    line-height: 1.4;
+}
+
+.slide--conclusion .qna-prompt {
+    font-size: 42px;
+    color: #4ADE80;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide--conclusion .cursor {
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    background-color: #4ADE80;
+    margin-left: 15px;
+}
+
+.slide--conclusion .references {
+    padding-top: 40px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.slide--conclusion .ref-item {
+    font-size: 18px;
+    color: #A5A5A5;
+}
+
+.slide--conclusion .ref-link {
+    color: #4ADE80;
+    text-decoration: none;
+}
+
+/* ——— Layouts de conteúdo ——— */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.content-grid--gap-lg {
+    gap: 60px;
+}
+
+.content-grid--tools {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.content-grid--with-mascot {
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: start;
+}
+
+.content-grid--with-mascot .point {
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.slide-mascot {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px;
+    padding-top: 28px;
+}
+
+.slide-mascot svg {
+    width: min(220px, 24vw);
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.6))
+        drop-shadow(0 0 28px rgba(74, 222, 128, 0.35));
+}
+
+/* Revelação progressiva por clique (ex.: slide “Por que escrevemos código?”) */
+.slide-reveal {
+    cursor: pointer;
+}
+
+.slide-reveal:focus {
+    outline: none;
+}
+
+.slide-reveal:focus-visible {
+    outline: 2px solid rgba(74, 222, 128, 0.45);
+    outline-offset: 4px;
+}
+
+.slide-reveal.is-reveal-complete {
+    cursor: default;
+}
+
+.slide-reveal .text-section .point {
+    display: none;
+}
+
+.slide-reveal .text-section .point.is-visible {
+    display: flex;
+    animation: slide-reveal-in 0.45s ease forwards;
+}
+
+@keyframes slide-reveal-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 14px;
+    color: #6b7c6e;
+    letter-spacing: 0.02em;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    user-select: none;
+}
+
+.reveal-hint.is-hidden {
+    opacity: 0;
+}
+
+/* Slide de destaque (um parágrafo-chave) */
+.slide-takeaway {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 80px 80px;
+    box-sizing: border-box;
+}
+
+.slide-takeaway .point {
+    font-size: 28px;
+    line-height: 1.45;
+    margin-bottom: 0;
+}
+
+.slide-takeaway .prompt-icon {
+    margin-top: 6px;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.main-content {
+    padding-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-area {
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.content-body {
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.content-layout {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+    gap: 60px;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-grid .text-section {
+    justify-content: center;
+}
+
+/* ——— Bullets / listas ——— */
+.point {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.4;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.main-content .point {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.content-grid--pr-context .point {
+    font-size: 22px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.prompt-icon {
+    color: #4ADE80;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.main-content .prompt-icon,
+.info-item .prompt-icon,
+.action-item .prompt-icon {
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.highlight {
+    color: #4ADE80;
+    font-weight: bold;
+}
+
+/* ——— Blocos de código / terminal ——— */
+.code-block {
+    background-color: #2D2D2D;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid #333;
+    color: #A5A5A5;
+    font-size: 18px;
+    min-height: 300px;
+}
+
+.comparison-grid .code-block {
+    min-height: 350px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.caos-block {
+    border-color: #F87171;
+}
+
+.controle-block {
+    border-color: #4ADE80;
+}
+
+.comment {
+    color: #6A9955;
+}
+
+.keyword {
+    color: #569CD6;
+}
+
+.terminal-window {
+    background-color: #000;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #333;
+    min-height: 400px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Slide: árvore git (git log --graph) */
+.slide-git-graph .git-graph-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 80px 48px;
+    box-sizing: border-box;
+    max-width: 980px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.git-graph-terminal {
+    min-height: 340px;
+}
+
+.git-graph-block {
+    padding-top: 16px;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.git-graph-line {
+    font-family: 'IBM Plex Mono', monospace;
+    white-space: pre;
+    color: #A5A5A5;
+}
+
+.git-graph-art {
+    color: #4ADE80;
+    font-weight: bold;
+}
+
+.git-graph-caption {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin: 24px 0 0;
+    font-size: 22px;
+    line-height: 1.45;
+    color: #A5A5A5;
+}
+
+.git-graph-caption .prompt-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.code-terminal {
+    background-color: #000;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid #333;
+    font-size: 16px;
+    color: #E0E0E0;
+    min-height: 350px;
+}
+
+.git-cmd {
+    color: #4ADE80;
+}
+
+.comparison-grid .git-cmd {
+    color: #A5A5A5;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.commit-hash {
+    color: #F1C40F;
+}
+
+.commit-msg-bad {
+    color: #A5A5A5;
+    font-style: italic;
+}
+
+.bad-msg {
+    color: #A5A5A5;
+    font-style: italic;
+}
+
+.good-msg {
+    color: #E0E0E0;
+}
+
+.type {
+    color: #4ADE80;
+    font-weight: bold;
+}
+
+.scope {
+    color: #A5A5A5;
+}
+
+.cmd {
+    color: #4ADE80;
+}
+
+/* ——— Colunas com título (PR context / comparação) ——— */
+.column-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.content-grid--pr-context .column-title {
+    color: #A5A5A5;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.comparison-grid .column-title {
+    text-align: center;
+}
+
+.caos-title {
+    color: #F87171;
+}
+
+.controle-title {
+    color: #4ADE80;
+}
+
+.warning {
+    color: #F87171;
+}
+
+.success {
+    color: #4ADE80;
+}
+
+/* ——— Barra de progresso (future self) ——— */
+.progress-bar {
+    margin-top: 40px;
+    width: 100%;
+    height: 20px;
+    background-color: #333;
+    position: relative;
+}
+
+.progress-bar .progress-fill {
+    width: 45%;
+    height: 100%;
+    background-color: #4ADE80;
+}
+
+/* ——— Conventional commits intro ——— */
+.structure-box {
+    background-color: #2D2D2D;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid #4ADE80;
+    margin-bottom: 40px;
+}
+
+.structure-text {
+    font-size: 36px;
+    color: #E0E0E0;
+    margin-bottom: 10px;
+}
+
+.structure-box .label {
+    color: #4ADE80;
+    font-size: 18px;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.type-item {
+    font-size: 22px;
+    color: #A5A5A5;
+    display: flex;
+    align-items: center;
+}
+
+.type-prefix {
+    color: #4ADE80;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.footer-note {
+    padding-top: 40px;
+    font-size: 18px;
+    color: #A5A5A5;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+}
+
+/* ——— Why conventional commits ——— */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-title {
+    font-size: 24px;
+    color: #4ADE80;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.benefit-title::before {
+    content: ">";
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.benefit-desc {
+    font-size: 18px;
+    color: #A5A5A5;
+    line-height: 1.5;
+}
+
+/* ——— Ferramentas ——— */
+.tool-item {
+    margin-bottom: 30px;
+}
+
+.tool-name {
+    font-size: 24px;
+    color: #4ADE80;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.tool-name::before {
+    content: ">";
+    margin-right: 15px;
+}
+
+.tool-desc {
+    font-size: 18px;
+    color: #A5A5A5;
+    padding-left: 30px;
+    line-height: 1.4;
+}
+
+/* ——— PR anatomy ——— */
+.checklist-item {
+    font-size: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.4;
+}
+
+.checkbox {
+    color: #4ADE80;
+    margin-right: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.checklist-item .label {
+    color: #4ADE80;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.description {
+    color: #A5A5A5;
+}
+
+.terminal-footer {
+    margin-top: auto;
+    padding-top: 40px;
+    padding-left: 80px;
+    color: #333;
+    font-size: 18px;
+}
+
+.slide-container .terminal-footer {
+    padding-right: 80px;
+}
+
+.slide--why-cc .terminal-footer {
+    font-size: 14px;
+}
+
+/* ——— Call to action ——— */
+.action-item {
+    font-size: 26px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.4;
+}
+
+/* ——— About me ——— */
+.photo-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #4ADE80;
+    background-color: #2D2D2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.photo-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    color: #4ADE80;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.info-item {
+    font-size: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+.info-item .label {
+    color: #4ADE80;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.value {
+    color: #A5A5A5;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    padding-left: 40px;
+    flex-wrap: wrap;
+}
+
+.tech-badge {
+    background-color: #333;
+    border: 1px solid #4ADE80;
+    color: #4ADE80;
+    padding: 8px 16px;
+    font-size: 16px;
+    display: inline-block;
+}
