@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="slides.css">
 </head>
 <body>
-    <div class="slide-container slide-reveal" tabindex="0" role="region" aria-label="Por que escrevemos código — clique ou Enter para revelar cada trecho">
+    <div class="slide-container">
         <div class="header">
             <h2>Por que escrevemos código?</h2>
         </div>
@@ -38,37 +38,6 @@
                 </svg>
             </div>
         </div>
-        <p class="reveal-hint" id="revealHint">Clique ou Enter — próximo trecho</p>
     </div>
-    <script>
-        (function () {
-            var root = document.querySelector('.slide-reveal');
-            if (!root) return;
-            var points = root.querySelectorAll('.text-section .point');
-            var hint = document.getElementById('revealHint');
-            var i = 0;
-
-            function revealNext() {
-                if (i >= points.length) return;
-                points[i].classList.add('is-visible');
-                i++;
-                if (i >= points.length) {
-                    root.classList.add('is-reveal-complete');
-                    if (hint) hint.classList.add('is-hidden');
-                }
-            }
-
-            root.addEventListener('click', function () {
-                revealNext();
-            });
-
-            root.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    revealNext();
-                }
-            });
-        })();
-    </script>
 </body>
 </html>
