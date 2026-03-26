@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            text-align: center;
+            width: 80%;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 56px;
+            color: #4ADE80;
+            margin-bottom: 30px;
+        }
+        .final-message {
+            font-size: 28px;
+            color: #A5A5A5;
+            margin-bottom: 60px;
+            line-height: 1.4;
+        }
+        .qna-prompt {
+            font-size: 42px;
+            color: #4ADE80;
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cursor {
+            display: inline-block;
+            width: 20px;
+            height: 40px;
+            background-color: #4ADE80;
+            margin-left: 15px;
+        }
+        .references {
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .ref-item {
+            font-size: 18px;
+            color: #A5A5A5;
+        }
+        .ref-link {
+            color: #4ADE80;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="content-wrapper">
+            <h2>O repositório como seu aliado</h2>
+            <div class="final-message">
+                Padronização não é sobre controle, é sobre colaboração.<br>
+                Menos tempo decifrando o passado, mais tempo construindo o futuro.
+            </div>
+            <div class="qna-prompt">
+                <span>> Perguntas?</span>
+                <span class="cursor"></span>
+            </div>
+        </div>
+        <div class="references">
+            <div class="ref-item">
+                <span>Docs: </span>
+                <span class="ref-link">conventionalcommits.org</span>
+            </div>
+            <div class="ref-item">
+                <span>Guia: </span>
+                <span class="ref-link">atlassian.com/git</span>
+            </div>
+            <div class="ref-item">
+                <span>Status: </span>
+                <span style="color: #4ADE80;">Success</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

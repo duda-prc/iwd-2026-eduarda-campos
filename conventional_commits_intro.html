@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #4ADE80;
+            margin-bottom: 20px;
+        }
+        .content-body {
+            padding-top: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .structure-box {
+            background-color: #2D2D2D;
+            padding-top: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+            border: 1px solid #4ADE80;
+            margin-bottom: 40px;
+        }
+        .structure-text {
+            font-size: 36px;
+            color: #E0E0E0;
+            margin-bottom: 10px;
+        }
+        .label {
+            color: #4ADE80;
+            font-size: 18px;
+        }
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding-top: 20px;
+        }
+        .type-item {
+            font-size: 22px;
+            color: #A5A5A5;
+            display: flex;
+            align-items: center;
+        }
+        .type-prefix {
+            color: #4ADE80;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .footer-note {
+            padding-top: 40px;
+            font-size: 18px;
+            color: #A5A5A5;
+            border-top: 1px solid #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Conventional Commits: O padrão ouro</h2>
+        </div>
+        <div class="content-body">
+            <div class="structure-box">
+                <div class="structure-text">
+                    <span style="color: #4ADE80;">&lt;tipo&gt;</span>(<span style="color: #A5A5A5;">&lt;escopo&gt;</span>): <span style="color: #E0E0E0;">&lt;descrição&gt;</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding-top: 10px;">
+                    <span class="label">Obrigatório</span>
+                    <span class="label" style="color: #A5A5A5;">Opcional</span>
+                    <span class="label">Obrigatório</span>
+                </div>
+            </div>
+
+            <div style="font-size: 24px; color: #E0E0E0; margin-bottom: 20px;">Tipos principais:</div>
+            <div class="types-grid">
+                <div class="type-item"><span class="type-prefix">feat:</span> nova feature</div>
+                <div class="type-item"><span class="type-prefix">fix:</span> correção</div>
+                <div class="type-item"><span class="type-prefix">docs:</span> documentação</div>
+                <div class="type-item"><span class="type-prefix">style:</span> formatação</div>
+                <div class="type-item"><span class="type-prefix">refactor:</span> refatoração</div>
+                <div class="type-item"><span class="type-prefix">test:</span> testes</div>
+                <div class="type-item"><span class="type-prefix">chore:</span> tarefas</div>
+                <div class="type-item"><span class="type-prefix">perf:</span> performance</div>
+            </div>
+
+            <div class="footer-note">
+                > Uma especificação leve para adicionar significado semântico às mensagens de commit.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

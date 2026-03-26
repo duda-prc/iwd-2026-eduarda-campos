@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #4ADE80;
+            margin-bottom: 20px;
+        }
+        .content-area {
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .action-item {
+            font-size: 26px;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.4;
+        }
+        .prompt-icon {
+            color: #4ADE80;
+            margin-right: 20px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .highlight {
+            color: #4ADE80;
+            font-weight: bold;
+        }
+        .terminal-footer {
+            margin-top: auto;
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+            color: #333;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Pequenas mudanças, grandes impactos</h2>
+        </div>
+        <div class="content-area">
+            <div class="action-item">
+                <span class="prompt-icon">></span>
+                <span>Comece adotando o padrão nos seus <span class="highlight">próprios commits</span> hoje.</span>
+            </div>
+            <div class="action-item">
+                <span class="prompt-icon">></span>
+                <span>Sugira <span class="highlight">templates de PR</span> simples para a sua equipe.</span>
+            </div>
+            <div class="action-item">
+                <span class="prompt-icon">></span>
+                <span>Use o histórico do Git como sua <span class="highlight">primeira fonte</span> de consulta.</span>
+            </div>
+            <div class="action-item">
+                <span class="prompt-icon">></span>
+                <span>A consistência é contagiosa: <span class="highlight">bons exemplos</span> arrastam o time.</span>
+            </div>
+        </div>
+        <div class="terminal-footer">
+            <span>$ git commit -m "feat: start cultural change"</span>
+        </div>
+    </div>
+</body>
+</html>

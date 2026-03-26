@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #4ADE80;
+            margin-bottom: 20px;
+        }
+        .content-layout {
+            display: flex;
+            align-items: flex-start;
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+            gap: 60px;
+        }
+        .photo-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid #4ADE80;
+            background-color: #2D2D2D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #A5A5A5;
+            font-size: 16px;
+            text-align: center;
+            flex-shrink: 0;
+            margin-top: 10px;
+        }
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+        }
+        .name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #4ADE80;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .info-item {
+            font-size: 24px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+        .prompt-icon {
+            color: #4ADE80;
+            margin-right: 20px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .label {
+            color: #4ADE80;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .value {
+            color: #A5A5A5;
+        }
+        .tech-stack {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            padding-left: 40px;
+            flex-wrap: wrap;
+        }
+        .tech-badge {
+            background-color: #333;
+            border: 1px solid #4ADE80;
+            color: #4ADE80;
+            padding: 8px 16px;
+            font-size: 16px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Quem sou eu</h2>
+        </div>
+        <div class="content-layout">
+            <div class="photo-avatar">
+                <span>📷 Sua Foto</span>
+            </div>
+            <div class="info-section">
+                <div class="name">Eduarda Campos</div>
+                
+                <div class="info-item">
+                    <span class="prompt-icon">></span>
+                    <div>
+                        <span class="label">Formação:</span>
+                        <span class="value">Engenheira de Software pelo ITA</span>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="prompt-icon">></span>
+                    <div>
+                        <span class="label">Experiência:</span>
+                        <span class="value">+3 anos na área de Backend</span>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="prompt-icon">></span>
+                    <div>
+                        <span class="label">Especialidade:</span>
+                        <span class="value">Healthcare & Saúde Digital</span>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="prompt-icon">></span>
+                    <div>
+                        <span class="label">Stack:</span>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #4ADE80;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #A5A5A5;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 40px;
+            padding-top: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .benefit-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .benefit-title {
+            font-size: 24px;
+            color: #4ADE80;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .benefit-title::before {
+            content: ">";
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .benefit-desc {
+            font-size: 18px;
+            color: #A5A5A5;
+            line-height: 1.5;
+        }
+        .terminal-footer {
+            margin-top: auto;
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+            color: #333;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Por que adotar Conventional Commits?</h2>
+            <div class="subtitle">Transformando mensagens em dados acionáveis</div>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-title">Clareza Imediata</div>
+                <div class="benefit-desc">Identifique o propósito da mudança (feat, fix, docs) apenas pelo prefixo, sem precisar abrir o código.</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-title">Automação de Changelogs</div>
+                <div class="benefit-desc">Gere notas de lançamento automáticas e precisas baseadas inteiramente no seu histórico de commits.</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-title">Versionamento Semântico</div>
+                <div class="benefit-desc">Determine automaticamente se a próxima versão deve ser Patch, Minor ou Major (SemVer).</div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-title">Consistência de Equipe</div>
+                <div class="benefit-desc">Estabeleça uma linguagem comum para todos os desenvolvedores, facilitando revisões e buscas.</div>
+            </div>
+        </div>
+        <div class="terminal-footer">
+            [system] analysis complete: efficiency increased by 40%
+        </div>
+    </div>
+</body>
+</html>

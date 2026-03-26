@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #4ADE80;
+            margin-bottom: 20px;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .tool-item {
+            margin-bottom: 30px;
+        }
+        .tool-name {
+            font-size: 24px;
+            color: #4ADE80;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .tool-name::before {
+            content: ">";
+            margin-right: 15px;
+        }
+        .tool-desc {
+            font-size: 18px;
+            color: #A5A5A5;
+            padding-left: 30px;
+            line-height: 1.4;
+        }
+        .code-terminal {
+            background-color: #000;
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 1px solid #333;
+            font-size: 16px;
+            color: #E0E0E0;
+            min-height: 350px;
+        }
+        .cmd { color: #4ADE80; }
+        .comment { color: #6A9955; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Ferramentas que facilitam a jornada</h2>
+        </div>
+        <div class="content-grid">
+            <div class="tools-list">
+                <div class="tool-item">
+                    <div class="tool-name">Commitizen</div>
+                    <div class="tool-desc">Interface interativa para criar commits padronizados sem precisar decorar a especificação.</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-name">Husky + Commitlint</div>
+                    <div class="tool-desc">Bloqueie commits que não seguem o padrão localmente, antes mesmo de chegarem ao servidor.</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-name">Semantic Release</div>
+                    <div class="tool-desc">Automatize totalmente o versionamento e a geração de notas de versão baseada nos commits.</div>
+                </div>
+            </div>
+            <div class="code-terminal">
+                <div class="comment"># Instalando as ferramentas</div>
+                <div><span class="cmd">npm</span> install -D commitizen</div>
+                <div><span class="cmd">npm</span> install -D @commitlint/cli</div>
+                <br>
+                <div class="comment"># Configurando o Husky</div>
+                <div><span class="cmd">npx</span> husky add .husky/commit-msg</div>
+                <br>
+                <div class="comment"># Exemplo de uso</div>
+                <div><span class="cmd">git</span> cz</div>
+                <div style="color: #A5A5A5; padding-top: 10px;">? Select the type of change:</div>
+                <div style="color: #4ADE80;">> feat: A new feature</div>
+                <div style="color: #A5A5A5;">  fix:  A bug fix</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

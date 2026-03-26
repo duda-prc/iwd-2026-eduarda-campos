@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #4ADE80;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            padding-top: 40px;
+            padding-left: 120px;
+            padding-right: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .point {
+            font-size: 28px;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+        }
+        .prompt-icon {
+            color: #4ADE80;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        .highlight {
+            color: #4ADE80;
+            font-weight: bold;
+        }
+        .progress-bar {
+            margin-top: 40px;
+            width: 100%;
+            height: 20px;
+            background-color: #333;
+            position: relative;
+        }
+        .progress-fill {
+            width: 45%;
+            height: 100%;
+            background-color: #4ADE80;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>O "Você do Futuro" agradece</h2>
+        </div>
+        <div class="main-content">
+            <div class="point">
+                <span class="prompt-icon">></span>
+                <span>Organização não é burocracia, é <span class="highlight">economia de tempo</span>.</span>
+            </div>
+            <div class="point">
+                <span class="prompt-icon">></span>
+                <span>Um histórico limpo permite entender o contexto sem ler todo o código.</span>
+            </div>
+            <div class="point">
+                <span class="prompt-icon">></span>
+                <span>Facilita o onboarding e a manutenção do sistema por qualquer pessoa.</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div style="font-size: 14px; color: #A5A5A5; padding-top: 10px;">[##########----------] 45% do projeto documentado</div>
+        </div>
+    </div>
+</body>
+</html>

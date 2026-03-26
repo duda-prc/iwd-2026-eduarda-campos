@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .header {
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #4ADE80;
+            margin-bottom: 20px;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .column-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .caos-title { color: #F87171; }
+        .controle-title { color: #4ADE80; }
+        .code-block {
+            background-color: #2D2D2D;
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 1px solid #333;
+            min-height: 350px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+        .caos-block { border-color: #F87171; }
+        .controle-block { border-color: #4ADE80; }
+        .git-cmd { color: #A5A5A5; font-size: 16px; margin-bottom: 10px; }
+        .bad-msg { color: #A5A5A5; font-style: italic; }
+        .good-msg { color: #E0E0E0; }
+        .type { color: #4ADE80; font-weight: bold; }
+        .scope { color: #A5A5A5; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Exemplos: Do Caos ao Controle</h2>
+        </div>
+        <div class="comparison-grid">
+            <div class="column">
+                <div class="column-title caos-title">O Caos</div>
+                <div class="code-block caos-block">
+                    <div class="git-cmd">$ git commit -m "..."</div>
+                    <div class="bad-msg">"ajustes no login"</div>
+                    <div style="margin-top: 40px;" class="git-cmd">$ git commit -m "..."</div>
+                    <div class="bad-msg">"nova feature"</div>
+                    <div style="margin-top: 40px;" class="git-cmd">$ git commit -m "..."</div>
+                    <div class="bad-msg">"fix bug"</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-title controle-title">O Controle</div>
+                <div class="code-block controle-block">
+                    <div class="git-cmd">$ git commit -m "..."</div>
+                    <div class="good-msg"><span class="type">fix</span><span class="scope">(auth)</span>: expiração de token no Safari</div>
+                    <div style="margin-top: 40px;" class="git-cmd">$ git commit -m "..."</div>
+                    <div class="good-msg"><span class="type">feat</span><span class="scope">(api)</span>: endpoint de busca por categoria</div>
+                    <div style="margin-top: 40px;" class="git-cmd">$ git commit -m "..."</div>
+                    <div class="good-msg"><span class="type">test</span><span class="scope">(ui)</span>: validar responsividade do menu</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

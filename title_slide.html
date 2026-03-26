@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { margin: 0; padding: 0; overflow: hidden; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            font-family: 'IBM Plex Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            text-align: center;
+            padding-top: 60px;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 64px;
+            color: #4ADE80;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        .subtitle {
+            font-size: 32px;
+            color: #A5A5A5;
+            margin-bottom: 24px;
+        }
+        .prompt {
+            font-size: 24px;
+            color: #4ADE80;
+        }
+        .cursor {
+            display: inline-block;
+            width: 15px;
+            height: 30px;
+            background-color: #4ADE80;
+            margin-left: 10px;
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .decoration-bar {
+            position: absolute;
+            bottom: 24px;
+            width: 80%;
+            height: 4px;
+            background-color: #333;
+        }
+        .progress-fill {
+            width: 100%;
+            height: 100%;
+            background-color: #4ADE80;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="content-wrapper">
+            <div class="prompt">> git checkout -b controle</div>
+            <h1>Do Caos ao Controle</h1>
+            <div class="subtitle">Padronização de Commits e Documentação<span class="cursor"></span></div>
+        </div>
+        <div class="decoration-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+</body>
+</html>
