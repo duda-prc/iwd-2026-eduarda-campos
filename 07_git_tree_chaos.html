@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+    <div class="slide-container slide-git-graph">
+        <div class="header">
+            <h2>Árvore git com mensagens genéricas</h2>
+        </div>
+        <div class="git-graph-panel">
+            <div class="terminal-window git-graph-terminal">
+                <div class="git-cmd">> git log --graph --oneline --all --decorate</div>
+                <div class="git-graph-block" role="img" aria-label="Gráfico de commits com mensagens genéricas: ajusta, teste, ajusta bug, nova feature">
+                    <div class="git-graph-line"><span class="git-graph-art">*   </span><span class="commit-hash">8f3d2a1</span> <span class="commit-msg-bad">merge branch 'fix'</span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">|\  </span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">| * </span><span class="commit-hash">7e4c9b0</span> <span class="commit-msg-bad">nova feature</span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">* | </span><span class="commit-hash">6d1a8ff</span> <span class="commit-msg-bad">ajusta bug</span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">|/  </span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">*   </span><span class="commit-hash">5b0c3ee</span> <span class="commit-msg-bad">ajusta</span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">*   </span><span class="commit-hash">4a9e77d</span> <span class="commit-msg-bad">teste</span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">*   </span><span class="commit-hash">3c8f661</span> <span class="commit-msg-bad">ajusta</span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">*   </span><span class="commit-hash">2b7d004</span> <span class="commit-msg-bad">nova feature</span></div>
+                    <div class="git-graph-line"><span class="git-graph-art">*   </span><span class="commit-hash">1a4e992</span> <span class="commit-msg-bad">teste</span></div>
+                </div>
+            </div>
+            <p class="git-graph-caption">
+                <span class="prompt-icon">&gt;</span>
+                <span>Branches e merges aparecem — mas mensagens genéricas não dizem <span class="highlight">o quê</span> mudou nem <span class="highlight">por quê</span>.</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -32,6 +32,8 @@
             width: 100%;
             height: 100%;
             align-items: center;
+            box-sizing: border-box;
+            padding: 28px 32px 0;
         }
         .presentation-container {
             width: 100%;
@@ -104,14 +106,14 @@
 <body>
     <div class="container-wrapper">
         <div class="presentation-container">
-            <iframe id="slideFrame" src="title_slide.html"></iframe>
+            <iframe id="slideFrame" src="01_title_slide.html"></iframe>
         </div>
 
         <div class="bottom-section">
             <div class="controls">
                 <button class="control-button" id="prevBtn" onclick="previousSlide()">← Anterior</button>
                 <div class="slide-counter">
-                    <span id="currentSlide">1</span> / <span id="totalSlides">13</span>
+                    <span id="currentSlide">1</span> / <span id="totalSlides">16</span>
                 </div>
                 <button class="control-button" id="nextBtn" onclick="nextSlide()">Próximo →</button>
             </div>
@@ -124,19 +126,22 @@
 
     <script>
         const slides = [
-            'title_slide.html',
-            'about_me.html',
-            'the_problem.html',
-            'future_self.html',
-            'commit_chaos.html',
-            'pr_context.html',
-            'pr_anatomy.html',
-            'conventional_commits_intro.html',
-            'why_conventional_commits.html',
-            'comparison_examples.html',
-            'tools_and_automation.html',
-            'call_to_action.html',
-            'conclusion_qna.html'
+            '01_title_slide.html',
+            '02_about_me.html',
+            '03_por_que_escrevemos_codigo.html',
+            '04_alem_do_codigo.html',
+            '05_the_problem.html',
+            '06_future_self.html',
+            '07_git_tree_chaos.html',
+            '08_commit_chaos.html',
+            '09_conventional_commits_intro.html',
+            '10_why_conventional_commits.html',
+            '11_comparison_examples.html',
+            '12_tools_and_automation.html',
+            '13_pr_anatomy.html',
+            '14_pr_context.html',
+            '15_call_to_action.html',
+            '16_conclusion_qna.html'
         ];
 
         let currentSlideIndex = 0;

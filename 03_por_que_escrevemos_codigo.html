@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+    <div class="slide-container slide-reveal" tabindex="0" role="region" aria-label="Por que escrevemos código — clique ou Enter para revelar cada trecho">
+        <div class="header">
+            <h2>Por que escrevemos código?</h2>
+        </div>
+        <div class="content-grid content-grid--with-mascot">
+            <div class="text-section">
+                <div class="point">
+                    <span class="prompt-icon">></span>
+                    <span>Para colocar em execução as <span class="highlight">regras de negócio</span> das empresas: o que precisa funcionar no mundo real, não só no editor.</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">></span>
+                    <span>Essas regras são <span class="highlight">voláteis</span>: produto, mercado, regulamento e prioridades mudam → o software precisa acompanhar.</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">></span>
+                    <span>Cada mudança empilha decisões. No curto prazo, o contexto está na cabeça do time; com o tempo, só resta o que ficou registrado no repositório.</span>
+                </div>
+            </div>
+            <div class="slide-mascot" aria-hidden="true">
+                <svg viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="96" r="58" stroke="#4ADE80" stroke-width="3.5"/>
+                    <circle cx="78" cy="90" r="7" fill="#4ADE80"/>
+                    <circle cx="122" cy="90" r="7" fill="#4ADE80"/>
+                    <path d="M 72 118 Q 100 142 128 118" stroke="#4ADE80" stroke-width="3.5" stroke-linecap="round"/>
+                    <line x1="100" y1="38" x2="100" y2="22" stroke="#4ADE80" stroke-width="3.5" stroke-linecap="round"/>
+                    <circle cx="100" cy="16" r="5.5" fill="#4ADE80"/>
+                    <path d="M 58 156 L 58 208 Q 100 228 142 208 L 142 156 Q 100 168 58 156" stroke="#4ADE80" stroke-width="3.5" stroke-linejoin="round"/>
+                    <path d="M 88 178 L 112 178" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M 82 192 L 118 192" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+            </div>
+        </div>
+        <p class="reveal-hint" id="revealHint">Clique ou Enter — próximo trecho</p>
+    </div>
+    <script>
+        (function () {
+            var root = document.querySelector('.slide-reveal');
+            if (!root) return;
+            var points = root.querySelectorAll('.text-section .point');
+            var hint = document.getElementById('revealHint');
+            var i = 0;
+
+            function revealNext() {
+                if (i >= points.length) return;
+                points[i].classList.add('is-visible');
+                i++;
+                if (i >= points.length) {
+                    root.classList.add('is-reveal-complete');
+                    if (hint) hint.classList.add('is-hidden');
+                }
+            }
+
+            root.addEventListener('click', function () {
+                revealNext();
+            });
+
+            root.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    revealNext();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

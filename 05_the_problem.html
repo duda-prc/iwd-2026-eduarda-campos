@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>O código é apenas metade da história</h2>
+        </div>
+        <div class="content-grid">
+            <div class="text-section">
+                <div class="point">
+                    <span class="prompt-icon">></span>
+                    <span>Com o tempo, o "porquê" some do dia a dia se não estiver no histórico (commits, PRs, decisões explícitas).</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">></span>
+                    <span><span class="highlight">Commits genéricos</span> criam uma dívida técnica de conhecimento invisível.</span>
+                </div>
+            </div>
+            <div class="code-block">
+                <span class="comment">// 6 meses depois...</span><br>
+                <span class="keyword">function</span> <span style="color: #DCDCAA;">processData</span>(input) {<br>
+                &nbsp;&nbsp;<span class="comment">// Por que este if existe?</span><br>
+                &nbsp;&nbsp;<span class="keyword">if</span> (input.type === <span style="color: #CE9178;">'LEGACY_01'</span>) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span style="color: #B5CEA8;">0</span>;<br>
+                &nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;<span class="comment">// git blame: "ajustes" (3/8/2025)</span><br>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

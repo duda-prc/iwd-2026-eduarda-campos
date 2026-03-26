@@ -3,7 +3,7 @@
     "title": "Do Caos ao Controle",
     "created": 1773019063.8545032,
     "last_updated": 1773019141.9264693,
-    "total_slides": 12
+    "total_slides": 16
   },
   "slides": [
     {
@@ -12,73 +12,114 @@
       "pageNum": 1
     },
     {
-      "id": "the_problem",
+      "id": "about_me",
       "state": "edited",
       "pageNum": 2
     },
     {
-      "id": "future_self",
+      "id": "por_que_escrevemos_codigo",
       "state": "edited",
       "pageNum": 3
     },
     {
-      "id": "commit_chaos",
+      "id": "alem_do_codigo",
       "state": "edited",
       "pageNum": 4
     },
     {
-      "id": "pr_context",
+      "id": "the_problem",
       "state": "edited",
       "pageNum": 5
     },
     {
-      "id": "pr_anatomy",
+      "id": "future_self",
       "state": "edited",
       "pageNum": 6
     },
     {
-      "id": "conventional_commits_intro",
+      "id": "git_tree_chaos",
       "state": "edited",
       "pageNum": 7
     },
     {
-      "id": "why_conventional_commits",
+      "id": "commit_chaos",
       "state": "edited",
       "pageNum": 8
     },
     {
-      "id": "comparison_examples",
+      "id": "conventional_commits_intro",
       "state": "edited",
       "pageNum": 9
     },
     {
-      "id": "tools_and_automation",
+      "id": "why_conventional_commits",
       "state": "edited",
       "pageNum": 10
     },
     {
-      "id": "call_to_action",
+      "id": "comparison_examples",
       "state": "edited",
       "pageNum": 11
     },
     {
-      "id": "conclusion_qna",
+      "id": "tools_and_automation",
       "state": "edited",
       "pageNum": 12
+    },
+    {
+      "id": "pr_anatomy",
+      "state": "edited",
+      "pageNum": 13
+    },
+    {
+      "id": "pr_context",
+      "state": "edited",
+      "pageNum": 14
+    },
+    {
+      "id": "call_to_action",
+      "state": "edited",
+      "pageNum": 15
+    },
+    {
+      "id": "conclusion_qna",
+      "state": "edited",
+      "pageNum": 16
     }
   ],
   "outline": [
     {
       "id": "title_slide",
       "title": "Do Caos ao Controle",
-      "summary": "Slide de título apresentando o tema: padronização de commits e documentação.",
+      "summary": "Slide de título: Conventional Commits e PRs com contexto.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "about_me",
+      "title": "Quem sou eu",
+      "summary": "Apresentação da palestrante e contexto profissional.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "por_que_escrevemos_codigo",
+      "title": "Por que escrevemos código?",
+      "summary": "Código materializa regras de negócio voláteis; com o tempo, o contexto precisa existir além das linhas de código.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "alem_do_codigo",
+      "title": "Além do código",
+      "summary": "Entender o sistema não é só ler código: a história por trás das escolhas importa tanto quanto a implementação.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
     {
       "id": "the_problem",
       "title": "O código é apenas metade da história",
-      "summary": "Explica que o código traduz regras de negócio e que decisões se perdem sem documentação adequada.",
+      "summary": "Aprofunda por que o código sozinho não preserva o porquê das decisões e commits genéricos pioram isso.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
@@ -90,23 +131,16 @@
       "slide_template_key": ""
     },
     {
+      "id": "git_tree_chaos",
+      "title": "Árvore cheia, narrativa vazia",
+      "summary": "git log --graph com mensagens genéricas (ajusta, teste, nova feature, ajusta bug): o grafo existe, a história não.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
       "id": "commit_chaos",
       "title": "O caos dos commits genéricos",
       "summary": "Mostra o impacto negativo de commits como \"fix\" ou \"ajustes\" no histórico do projeto.",
-      "image_plan": "Use a suitable image if needed",
-      "slide_template_key": ""
-    },
-    {
-      "id": "pr_context",
-      "title": "Contexto em MR/PRs: Ajude o seu revisor",
-      "summary": "Enfatiza a necessidade de fornecer contexto para acelerar revisões e melhorar a qualidade.",
-      "image_plan": "Use a suitable image if needed",
-      "slide_template_key": ""
-    },
-    {
-      "id": "pr_anatomy",
-      "title": "Anatomia de um Pull Request eficaz",
-      "summary": "Lista os elementos essenciais de um bom PR: título, descrição, solução, testes e evidências.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
@@ -135,6 +169,20 @@
       "id": "tools_and_automation",
       "title": "Ferramentas que facilitam a jornada",
       "summary": "Apresenta ferramentas como Commitizen, Husky e Semantic Release para ajudar na adoção.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "pr_anatomy",
+      "title": "Anatomia de um Pull Request eficaz",
+      "summary": "Lista os elementos essenciais de um bom PR: título, descrição, solução, testes e evidências.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "pr_context",
+      "title": "Contexto em MR/PRs: Ajude o seu revisor",
+      "summary": "Depois das ferramentas de commits: por que contexto na descrição do PR fecha o ciclo com o revisor.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
