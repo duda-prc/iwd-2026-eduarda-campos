@@ -4,7 +4,7 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 
 ## 📋 Conteúdo
 
-31 slides cobrindo:
+33 slides cobrindo:
 1. Capa
 2. Quem sou eu
 3. Expectativa da Duda no mundo tech
@@ -28,14 +28,16 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 21. Boas práticas de PR (introdução ao bloco de revisão)
 22. Anatomia de um Pull Request eficaz
 23. Contexto em PRs — ajude o revisor
-24. Gancho — “Bora mergear?” (antes das estratégias na main)
-25. Estratégias de merge na main — introdução (boas práticas 3/3)
-26. Squash and merge
-27. Merge commit
-28. Rebase and merge (histórico linear)
-29. Pequenas mudanças, grandes impactos
-30. Frase de fechamento — por que escrevemos código?
-31. Conclusão e Q&A
+24. Exemplo visual — PR com bom contexto (captura de tela)
+25. Exemplo visual — PR fraco ou sem contexto (captura de tela)
+26. Gancho — “Bora mergear?” (antes das estratégias na main)
+27. Estratégias de merge na main — introdução (boas práticas 3/3)
+28. Squash and merge
+29. Merge commit
+30. Rebase and merge (histórico linear)
+31. Pequenas mudanças, grandes impactos
+32. Frase de fechamento — por que escrevemos código?
+33. Conclusão e Q&A
 
 ## 🚀 Como Usar Localmente
 
@@ -119,14 +121,16 @@ apresentacao-commits/
 ├── 21_boas_praticas_mr_pr_intro.html     # Slide 21: Intro boas práticas de PR
 ├── 22_pr_anatomy.html                    # Slide 22: Anatomia de um PR
 ├── 23_pr_context.html                    # Slide 23: Contexto em PRs
-├── 24_gancho_merge_strategies.html       # Slide 24: Gancho “Bora mergear?”
-├── 25_merge_main_intro.html              # Slide 25: Merge na main (intro)
-├── 26_merge_squash.html                  # Slide 26: Squash and merge
-├── 27_merge_commit.html                  # Slide 27: Merge commit
-├── 28_merge_rebase.html                  # Slide 28: Rebase and merge
-├── 29_call_to_action.html                # Slide 29: Chamada para ação
-├── 30_final_phrase.html                  # Slide 30: Frase de fechamento
-├── 31_conclusion_qna.html                # Slide 31: Conclusão / Q&A
+├── 24_pr_exemplo_bom.html                # Slide 24: Exemplo de PR com contexto (imagem)
+├── 25_pr_exemplo_ruim.html               # Slide 25: Exemplo de PR sem contexto (imagem)
+├── 26_gancho_merge_strategies.html       # Slide 26: Gancho “Bora mergear?”
+├── 27_merge_main_intro.html              # Slide 27: Merge na main (intro)
+├── 28_merge_squash.html                  # Slide 28: Squash and merge
+├── 29_merge_commit.html                  # Slide 29: Merge commit
+├── 30_merge_rebase.html                  # Slide 30: Rebase and merge
+├── 31_call_to_action.html                # Slide 31: Chamada para ação
+├── 32_final_phrase.html                  # Slide 32: Frase de fechamento
+├── 33_conclusion_qna.html                # Slide 33: Conclusão / Q&A
 └── README.md                          # Este arquivo
 ```
 

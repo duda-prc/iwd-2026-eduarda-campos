@@ -107,6 +107,10 @@ body {
     margin-bottom: 8px;
 }
 
+.header.header--bp-anchor.slide-header--image-hero h2 {
+    margin-bottom: 8px;
+}
+
 .slide-image-hero {
     flex: 1;
     display: flex;
