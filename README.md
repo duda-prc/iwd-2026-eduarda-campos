@@ -4,23 +4,25 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 
 ## 📋 Conteúdo
 
-16 slides cobrindo:
+18 slides cobrindo:
 1. Capa
 2. Quem sou eu
-3. Por que escrevemos código? (negócio, regras voláteis e contexto)
-4. Além do código (fechamento: história vs. implementação)
-5. O código é apenas metade da história
-6. O "você do futuro" agradece
-7. Árvore Git com mensagens genéricas (`git log --graph`)
-8. O caos dos commits genéricos
-9. Conventional Commits — o padrão ouro (solução: histórico)
-10. Benefícios da adoção
-11. Exemplos: Do Caos ao Controle
-12. Ferramentas que facilitam a jornada
-13. Anatomia de um Pull Request eficaz (solução: MR/PR)
-14. Contexto em MR/PRs — ajude o revisor
-15. Pequenas mudanças, grandes impactos
-16. Conclusão e Q&A
+3. Expectativa da Duda no mundo tech
+4. Realidade da Duda no mundo tech
+5. Por que escrevemos código? (negócio, regras voláteis e contexto)
+6. Além do código (fechamento: história vs. implementação)
+7. O código é apenas metade da história
+8. O "você do futuro" agradece
+9. Árvore Git com mensagens genéricas (`git log --graph`)
+10. O caos dos commits genéricos
+11. Conventional Commits — o padrão ouro (solução: histórico)
+12. Benefícios da adoção
+13. Exemplos: Do Caos ao Controle
+14. Ferramentas que facilitam a jornada
+15. Anatomia de um Pull Request eficaz (solução: MR/PR)
+16. Contexto em MR/PRs — ajude o revisor
+17. Pequenas mudanças, grandes impactos
+18. Conclusão e Q&A
 
 ## 🚀 Como Usar Localmente
 
@@ -83,20 +85,22 @@ apresentacao-commits/
 ├── slides.css                         # Estilos compartilhados dos slides
 ├── 01_title_slide.html                   # Slide 1: Capa
 ├── 02_about_me.html                      # Slide 2: Quem sou eu
-├── 03_por_que_escrevemos_codigo.html     # Slide 3: Negócio, volatilidade e contexto
-├── 04_alem_do_codigo.html                # Slide 4: História vs. implementação
-├── 05_the_problem.html                   # Slide 5: O código é metade da história
-├── 06_future_self.html                   # Slide 6: O "você do futuro"
-├── 07_git_tree_chaos.html                # Slide 7: Árvore git / mensagens vazias
-├── 08_commit_chaos.html                  # Slide 8: Caos dos commits
-├── 09_conventional_commits_intro.html    # Slide 9: Conventional Commits
-├── 10_why_conventional_commits.html     # Slide 10: Benefícios
-├── 11_comparison_examples.html           # Slide 11: Exemplos
-├── 12_tools_and_automation.html          # Slide 12: Ferramentas
-├── 13_pr_anatomy.html                    # Slide 13: Anatomia de um PR
-├── 14_pr_context.html                    # Slide 14: Contexto em PRs
-├── 15_call_to_action.html                # Slide 15: Chamada para ação
-├── 16_conclusion_qna.html                # Slide 16: Conclusão / Q&A
+├── 03_expectativa_duda_mundo_tech.html   # Slide 3: Expectativa (imagem grande)
+├── 04_realidade_duda_mundo_tech.html     # Slide 4: Realidade (imagem grande)
+├── 05_por_que_escrevemos_codigo.html     # Slide 5: Negócio, volatilidade e contexto
+├── 06_alem_do_codigo.html                # Slide 6: História vs. implementação
+├── 07_the_problem.html                   # Slide 7: O código é metade da história
+├── 08_future_self.html                   # Slide 8: O "você do futuro"
+├── 09_git_tree_chaos.html                # Slide 9: Árvore git / mensagens vazias
+├── 10_commit_chaos.html                  # Slide 10: Caos dos commits
+├── 11_conventional_commits_intro.html    # Slide 11: Conventional Commits
+├── 12_why_conventional_commits.html     # Slide 12: Benefícios
+├── 13_comparison_examples.html           # Slide 13: Exemplos
+├── 14_tools_and_automation.html          # Slide 14: Ferramentas
+├── 15_pr_anatomy.html                    # Slide 15: Anatomia de um PR
+├── 16_pr_context.html                    # Slide 16: Contexto em PRs
+├── 17_call_to_action.html                # Slide 17: Chamada para ação
+├── 18_conclusion_qna.html                # Slide 18: Conclusão / Q&A
 └── README.md                          # Este arquivo
 ```
 

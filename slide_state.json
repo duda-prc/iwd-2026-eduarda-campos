@@ -3,7 +3,7 @@
     "title": "Do Caos ao Controle",
     "created": 1773019063.8545032,
     "last_updated": 1773019141.9264693,
-    "total_slides": 16
+    "total_slides": 18
   },
   "slides": [
     {
@@ -17,74 +17,84 @@
       "pageNum": 2
     },
     {
-      "id": "por_que_escrevemos_codigo",
+      "id": "expectativa_duda_mundo_tech",
       "state": "edited",
       "pageNum": 3
     },
     {
-      "id": "alem_do_codigo",
+      "id": "realidade_duda_mundo_tech",
       "state": "edited",
       "pageNum": 4
     },
     {
-      "id": "the_problem",
+      "id": "por_que_escrevemos_codigo",
       "state": "edited",
       "pageNum": 5
     },
     {
-      "id": "future_self",
+      "id": "alem_do_codigo",
       "state": "edited",
       "pageNum": 6
     },
     {
-      "id": "git_tree_chaos",
+      "id": "the_problem",
       "state": "edited",
       "pageNum": 7
     },
     {
-      "id": "commit_chaos",
+      "id": "future_self",
       "state": "edited",
       "pageNum": 8
     },
     {
-      "id": "conventional_commits_intro",
+      "id": "git_tree_chaos",
       "state": "edited",
       "pageNum": 9
     },
     {
-      "id": "why_conventional_commits",
+      "id": "commit_chaos",
       "state": "edited",
       "pageNum": 10
     },
     {
-      "id": "comparison_examples",
+      "id": "conventional_commits_intro",
       "state": "edited",
       "pageNum": 11
     },
     {
-      "id": "tools_and_automation",
+      "id": "why_conventional_commits",
       "state": "edited",
       "pageNum": 12
     },
     {
-      "id": "pr_anatomy",
+      "id": "comparison_examples",
       "state": "edited",
       "pageNum": 13
     },
     {
-      "id": "pr_context",
+      "id": "tools_and_automation",
       "state": "edited",
       "pageNum": 14
     },
     {
-      "id": "call_to_action",
+      "id": "pr_anatomy",
       "state": "edited",
       "pageNum": 15
     },
     {
-      "id": "conclusion_qna",
+      "id": "pr_context",
       "state": "edited",
       "pageNum": 16
+    },
+    {
+      "id": "call_to_action",
+      "state": "edited",
+      "pageNum": 17
+    },
+    {
+      "id": "conclusion_qna",
+      "state": "edited",
+      "pageNum": 18
     }
   ],
   "outline": [
@@ -100,6 +110,20 @@
       "title": "Quem sou eu",
       "summary": "Apresentação da palestrante e contexto profissional.",
       "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "expectativa_duda_mundo_tech",
+      "title": "Expectativa da Duda no mundo tech",
+      "summary": "Slide com espaço para imagem grande (expectativa).",
+      "image_plan": "Imagem grande central",
+      "slide_template_key": ""
+    },
+    {
+      "id": "realidade_duda_mundo_tech",
+      "title": "Realidade da Duda no mundo tech",
+      "summary": "Slide com espaço para imagem grande (realidade).",
+      "image_plan": "Imagem grande central",
       "slide_template_key": ""
     },
     {

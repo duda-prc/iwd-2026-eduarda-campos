@@ -42,6 +42,53 @@ body {
     margin-bottom: 40px;
 }
 
+/* Título + área grande para imagem (expectativa / realidade, etc.) */
+.slide-header--image-hero {
+    padding-top: 48px;
+    padding-bottom: 0;
+}
+
+.slide-header--image-hero h2 {
+    margin-bottom: 12px;
+}
+
+.slide-image-hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 12px 80px 40px;
+    box-sizing: border-box;
+}
+
+.slide-image-placeholder {
+    flex: 1;
+    width: 100%;
+    min-height: min(52vh, 440px);
+    border: 2px dashed rgba(74, 222, 128, 0.4);
+    border-radius: 10px;
+    background: rgba(45, 45, 45, 0.5);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-image-placeholder:empty::after {
+    content: "Espaço para imagem";
+    color: #6b7c6e;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+}
+
+.slide-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    max-height: min(52vh, 440px);
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 /* ——— Slide título (01) ——— */
 .slide--title * {
     margin: 0;
