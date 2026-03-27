@@ -15,7 +15,7 @@
             </p>
             <h2>Como integrar na branch principal?</h2>
         </div>
-        <div class="merge-intro-body">
+        <div class="merge-intro-body merge-intro-body--split">
             <div class="text-section">
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
@@ -23,60 +23,12 @@
                 </div>
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span>Alinhe <span class="highlight">regra + convenção</span> no time; nos próximos slides, três formatos típicos com <span class="highlight">antes → depois</span> no desenho do histórico.</span>
+                    <span>Alinhe <span class="highlight">regra + convenção</span> no time.</span>
                 </div>
             </div>
-            <div class="merge-preview-strip" role="presentation">
-                <article class="merge-preview-card">
-                    <h3 class="merge-preview-card__title">Squash</h3>
-                    <p class="merge-preview-card__hint">Vários commits do PR viram um só na main.</p>
-                    <pre class="merge-graph merge-graph--compact" aria-hidden="true"><span class="mg-step">ANTES</span>  <span class="mg-tag">PR #42 · 3 commits</span>
-    <span class="mg-art">*</span> <span class="mg-commit">E</span>  <span class="mg-feat">wip</span>
-    <span class="mg-art">*</span> <span class="mg-commit">D</span>  <span class="mg-feat">testes</span>
-    <span class="mg-art">*</span> <span class="mg-commit">C</span>  <span class="mg-feat">scaffold</span>
-    <span class="mg-art">/</span>
-<span class="mg-main">main</span> <span class="mg-art">*</span> <span class="mg-commit">B</span>
-   <span class="mg-art">*</span> <span class="mg-commit">A</span>
-
-<span class="mg-step">DEPOIS</span>  <span class="mg-tag">histórico “fino”</span>
-<span class="mg-main">main</span> <span class="mg-art">*</span> <span class="mg-squash">S</span>  <span class="mg-tag">feat: entrega (#42)</span>
-       <span class="mg-art">*</span> <span class="mg-commit">B</span>
-       <span class="mg-art">*</span> <span class="mg-commit">A</span></pre>
-                </article>
-                <article class="merge-preview-card">
-                    <h3 class="merge-preview-card__title">Merge commit</h3>
-                    <p class="merge-preview-card__hint">Aparece o nó de merge ligando as linhas.</p>
-                    <pre class="merge-graph merge-graph--compact" aria-hidden="true"><span class="mg-step">ANTES</span>  <span class="mg-tag">duas pontas vivas</span>
-<span class="mg-main">main</span>   <span class="mg-art">*</span> <span class="mg-commit">B</span>  <span class="mg-tag">← produção</span>
-         <span class="mg-art">|</span>
-<span class="mg-feat">feat</span> <span class="mg-art">*</span> <span class="mg-commit">D</span>
-       <span class="mg-art">*</span> <span class="mg-commit">C</span>
-
-<span class="mg-step">DEPOIS</span>  <span class="mg-tag">nó M com 2 pais</span>
-<span class="mg-art">*</span>   <span class="mg-merge">M</span>  <span class="mg-tag">Merge PR #42</span>
-<span class="mg-art">|</span><span class="mg-art">\</span>
-<span class="mg-art">|</span> <span class="mg-art">*</span> <span class="mg-commit">D</span>
-<span class="mg-art">|</span> <span class="mg-art">*</span> <span class="mg-commit">C</span>
-<span class="mg-art">*</span> <span class="mg-art">/</span> <span class="mg-commit">B</span>
-<span class="mg-art">|</span>/
-<span class="mg-art">*</span> <span class="mg-commit">A</span></pre>
-                </article>
-                <article class="merge-preview-card">
-                    <h3 class="merge-preview-card__title">Rebase + merge</h3>
-                    <p class="merge-preview-card__hint">Commits reencaixados: linha reta na main.</p>
-                    <pre class="merge-graph merge-graph--compact" aria-hidden="true"><span class="mg-step">ANTES</span>  <span class="mg-tag">C e D “pendurados”</span>
-<span class="mg-main">main</span>   <span class="mg-art">*</span> <span class="mg-commit">B</span>
-         <span class="mg-art">|</span>
-<span class="mg-feat">feat</span> <span class="mg-art">*</span> <span class="mg-commit">D</span>
-       <span class="mg-art">*</span> <span class="mg-commit">C</span>
-
-<span class="mg-step">DEPOIS</span>  <span class="mg-tag">reaplicados · novos SHAs</span>
-<span class="mg-main">main</span>   <span class="mg-art">*</span> <span class="mg-rebased">D′</span>  <span class="mg-tag">mesmo patch,</span>
-         <span class="mg-art">*</span> <span class="mg-rebased">C′</span>  <span class="mg-tag">hash diferente</span>
-         <span class="mg-art">*</span> <span class="mg-commit">B</span>
-         <span class="mg-art">*</span> <span class="mg-commit">A</span></pre>
-                </article>
-            </div>
+            <figure class="merge-intro-illustration" role="img" aria-label="Interface com opções de merge ao aceitar um pull request">
+                <img src="merge-pr.png" alt="Captura da interface de merge do pull request na plataforma, mostrando as opções disponíveis">
+            </figure>
         </div>
     </div>
 </body>
