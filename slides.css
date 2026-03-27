@@ -400,7 +400,8 @@ body {
     padding-bottom: 24px;
 }
 
-.content-grid--merge-intro .point {
+.content-grid--merge-intro .point,
+.merge-intro-body .point {
     font-size: 20px;
     line-height: 1.45;
     margin-bottom: 16px;
@@ -415,6 +416,32 @@ body {
     box-sizing: border-box;
     flex: 1;
     min-height: 0;
+}
+
+.merge-intro-body.merge-intro-body--split {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 32px;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 28px;
+}
+
+.merge-intro-illustration {
+    margin: 0;
+    min-width: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    background: #1a1a1a;
+    box-sizing: border-box;
+}
+
+.merge-intro-illustration img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .merge-preview-strip {
@@ -587,6 +614,10 @@ body {
 
 @media (max-width: 1100px) {
     .merge-preview-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .merge-intro-body.merge-intro-body--split {
         grid-template-columns: 1fr;
     }
 }
