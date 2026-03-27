@@ -13,25 +13,25 @@
                 <span class="good-practice-tracker__sep">·</span>
                 <span class="good-practice-tracker__item">Estratégias de merge na sua branch <span class="highlight">main</span></span>
             </p>
-            <h2>Merge commit</h2>
+            <h2>Rebase and merge <span class="header-merge-sub">(histórico linear)</span></h2>
         </div>
         <div class="merge-intro-body merge-intro-body--split">
             <div class="text-section">
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight">O que é:</span> nasce um commit <span class="highlight">M</span> só para fechar o PR — ele tem <span class="highlight">dois pais</span> (ponta da main e ponta da feature). O trabalho da branch continua visível no grafo.</span>
+                    <span><span class="highlight">O que é:</span> a plataforma <span class="highlight">reaplica o trabalho do PR por cima da main atual</span> — os commits viram <span class="highlight">novos SHAs</span> e entram na main <span class="highlight">em sequência</span>, <span class="highlight">sem commit de merge</span> (sem “nó M”).</span>
                 </div>
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight">Quando:</span> o time gosta de ver <span class="highlight">cada commit</span> no histórico e não se importa com mais ramificações no grafo.</span>
+                    <span><span class="highlight">Quando:</span> o time quer uma <span class="highlight">main legível e quase reta</span>, ou usa ferramentas de release / changelog que se dão melhor com <span class="highlight">poucos merge commits</span> na linha do tempo.</span>
                 </div>
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight">Trade-off:</span> o log fica mais <span class="highlight">ramificado</span>; bisect e leitura linear podem exigir um passo a mais.</span>
+                    <span><span class="highlight">Atenção:</span> isso <span class="highlight">reescreve o histórico</span> da contribuição — no remoto, aqueles commits deixam de ser os mesmos objetos.</span>
                 </div>
             </div>
-            <figure class="merge-intro-illustration" role="img" aria-label="Exemplo de histórico com merge commit">
-                <img src="merge-commit.png" alt="Diagrama ou captura ilustrando o efeito do merge commit no histórico Git, com commit de merge e dois pais">
+            <figure class="merge-intro-illustration" role="img" aria-label="Exemplo de histórico com rebase and merge">
+                <img src="rebase-merge.png" alt="Diagrama ou captura ilustrando rebase and merge: commits replantados em linha reta na main">
             </figure>
         </div>
     </div>

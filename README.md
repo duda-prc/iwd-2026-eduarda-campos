@@ -4,7 +4,7 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 
 ## 📋 Conteúdo
 
-33 slides cobrindo:
+35 slides cobrindo:
 1. Capa
 2. Quem sou eu
 3. Expectativa da Duda no mundo tech
@@ -16,28 +16,30 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 9. Árvore Git com mensagens genéricas (`git log --graph`)
 10. Como controlar esse caos?
 11. Boas práticas para colaboração de código
-12. Conventional Commits — o padrão ouro (formato da mensagem)
-13. Conventional Commits — tipos (`feat`/`fix` e Convenção Angular)
-14. Exemplos de commits convencionais
-15. Benefícios da adoção
-16. Exemplos: Do Caos ao Controle
-17. Gancho: padrão convencional + histórico limpo
-18. Rebase interativo (`git rebase -i`)
-19. `git commit --amend` (último commit)
-20. Gancho — “Bora abrir um PR?”
-21. Boas práticas de PR (introdução ao bloco de revisão)
-22. Anatomia de um Pull Request eficaz
-23. Contexto em PRs — ajude o revisor
-24. Exemplo visual — PR fraco ou sem contexto (captura de tela)
-25. Exemplo visual — PR com bom contexto (captura de tela)
-26. Gancho — “Bora mergear?” (antes das estratégias na main)
-27. Estratégias de merge na main — introdução (boas práticas 3/3)
-28. Squash and merge
+12. Comunicação clara nos commits (o que é Conventional Commits)
+13. Conventional Commits — o padrão ouro (formato da mensagem)
+14. Conventional Commits — tipos (`feat`/`fix` e Convenção Angular)
+15. Exemplos de commits convencionais
+16. Benefícios da adoção
+17. Exemplos: Do Caos ao Controle
+18. Gancho: padrão convencional + histórico limpo
+19. Rebase interativo (`git rebase -i`)
+20. `git commit --amend` (último commit)
+21. Gancho — “Bora abrir um PR?”
+22. Boas práticas de PR (introdução ao bloco de revisão)
+23. Anatomia de um Pull Request eficaz
+24. Contexto em PRs — ajude o revisor
+25. Exemplo visual — PR fraco ou sem contexto (captura de tela)
+26. Exemplo visual — PR com bom contexto (captura de tela)
+27. Gancho — “Bora mergear?” (antes das estratégias na main)
+28. Estratégias de merge na main — introdução (boas práticas 3/3)
 29. Merge commit
-30. Rebase and merge (histórico linear)
-31. Pequenas mudanças, grandes impactos
-32. Frase de fechamento — por que escrevemos código?
-33. Conclusão e Q&A
+30. Squash and merge
+31. Rebase and merge (histórico linear)
+32. Resumo: o que vimos (commits, PRs, merge)
+33. Pequenas mudanças, grandes impactos
+34. Frase de fechamento — por que escrevemos código?
+35. Conclusão e Q&A
 
 ## 🚀 Como Usar Localmente
 
@@ -109,28 +111,30 @@ apresentacao-commits/
 ├── 09_git_tree_chaos.html                # Slide 9: Árvore git / mensagens vazias
 ├── 10_commit_chaos.html                  # Slide 10: Como controlar esse caos?
 ├── 11_boas_praticas_colaboracao_codigo.html # Slide 11: Boas práticas colaboração
-├── 12_conventional_commits_intro.html    # Slide 12: Formato Conventional Commits
-├── 13_conventional_commits_tipos.html    # Slide 13: Tipos feat/fix e Angular
-├── 14_conventional_commits_exemplos.html # Slide 14: Exemplos convencionais
-├── 15_why_conventional_commits.html      # Slide 15: Benefícios
-├── 16_comparison_examples.html           # Slide 16: Do Caos ao Controle
-├── 17_gancho_commits_padrao_limpeza.html # Slide 17: Padrão + limpeza (gancho)
-├── 18_git_rebase_interativo.html         # Slide 18: Rebase interativo
-├── 19_git_commit_amend.html              # Slide 19: git commit --amend
-├── 20_gancho_boas_praticas_mr_pr.html    # Slide 20: Gancho “Bora abrir um PR?”
-├── 21_boas_praticas_mr_pr_intro.html     # Slide 21: Intro boas práticas de PR
-├── 22_pr_anatomy.html                    # Slide 22: Anatomia de um PR
-├── 23_pr_context.html                    # Slide 23: Contexto em PRs
-├── 24_pr_exemplo_ruim.html               # Slide 24: Exemplo de PR sem contexto (imagem)
-├── 25_pr_exemplo_bom.html                # Slide 25: Exemplo de PR com contexto (imagem)
-├── 26_gancho_merge_strategies.html       # Slide 26: Gancho “Bora mergear?”
-├── 27_merge_main_intro.html              # Slide 27: Merge na main (intro)
-├── 28_merge_squash.html                  # Slide 28: Squash and merge
+├── 12_comunicacao_clara_commits.html     # Slide 12: Comunicação clara / o que é CC
+├── 13_conventional_commits_intro.html    # Slide 13: Formato Conventional Commits
+├── 14_conventional_commits_tipos.html    # Slide 14: Tipos feat/fix e Angular
+├── 15_conventional_commits_exemplos.html # Slide 15: Exemplos convencionais
+├── 16_why_conventional_commits.html      # Slide 16: Benefícios
+├── 17_comparison_examples.html           # Slide 17: Do Caos ao Controle
+├── 18_gancho_commits_padrao_limpeza.html # Slide 18: Padrão + limpeza (gancho)
+├── 19_git_rebase_interativo.html         # Slide 19: Rebase interativo
+├── 20_git_commit_amend.html              # Slide 20: git commit --amend
+├── 21_gancho_boas_praticas_mr_pr.html    # Slide 21: Gancho “Bora abrir um PR?”
+├── 22_boas_praticas_mr_pr_intro.html     # Slide 22: Intro boas práticas de PR
+├── 23_pr_anatomy.html                    # Slide 23: Anatomia de um PR
+├── 24_pr_context.html                    # Slide 24: Contexto em PRs
+├── 25_pr_exemplo_ruim.html               # Slide 25: Exemplo de PR sem contexto (imagem)
+├── 26_pr_exemplo_bom.html                # Slide 26: Exemplo de PR com contexto (imagem)
+├── 27_gancho_merge_strategies.html       # Slide 27: Gancho “Bora mergear?”
+├── 28_merge_main_intro.html              # Slide 28: Merge na main (intro)
 ├── 29_merge_commit.html                  # Slide 29: Merge commit
-├── 30_merge_rebase.html                  # Slide 30: Rebase and merge
-├── 31_call_to_action.html                # Slide 31: Chamada para ação
-├── 32_final_phrase.html                  # Slide 32: Frase de fechamento
-├── 33_conclusion_qna.html                # Slide 33: Conclusão / Q&A
+├── 30_merge_squash.html                  # Slide 30: Squash and merge
+├── 31_merge_rebase.html                  # Slide 31: Rebase and merge
+├── 32_resumo_o_que_vimos.html            # Slide 32: Resumo do que vimos
+├── 33_call_to_action.html                # Slide 33: Chamada para ação
+├── 34_final_phrase.html                  # Slide 34: Frase de fechamento
+├── 35_conclusion_qna.html                # Slide 35: Conclusão / Q&A
 └── README.md                          # Este arquivo
 ```
 

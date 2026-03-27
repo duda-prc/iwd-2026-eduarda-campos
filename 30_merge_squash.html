@@ -13,25 +13,25 @@
                 <span class="good-practice-tracker__sep">·</span>
                 <span class="good-practice-tracker__item">Estratégias de merge na sua branch <span class="highlight">main</span></span>
             </p>
-            <h2>Merge commit</h2>
+            <h2>Squash and merge</h2>
         </div>
         <div class="merge-intro-body merge-intro-body--split">
             <div class="text-section">
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight">O que é:</span> nasce um commit <span class="highlight">M</span> só para fechar o PR — ele tem <span class="highlight">dois pais</span> (ponta da main e ponta da feature). O trabalho da branch continua visível no grafo.</span>
+                    <span><span class="highlight">O que é:</span> o PR inteiro vira <span class="highlight">um único commit</span> na ponta da <span class="highlight">main</span>. Você ajusta a mensagem final no botão de merge.</span>
                 </div>
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight">Quando:</span> o time gosta de ver <span class="highlight">cada commit</span> no histórico e não se importa com mais ramificações no grafo.</span>
+                    <span><span class="highlight">Quando:</span> WIP e muitos commits pequenos na feature branch; <span class="highlight">main fina</span> e leitura rápida do que entrou por PR.</span>
                 </div>
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight">Trade-off:</span> o log fica mais <span class="highlight">ramificado</span>; bisect e leitura linear podem exigir um passo a mais.</span>
+                    <span><span class="highlight">Trade-off:</span> na main some o detalhe commit a commit - bom título + descrição do PR (ou corpo do squash) carregam o contexto.</span>
                 </div>
             </div>
-            <figure class="merge-intro-illustration" role="img" aria-label="Exemplo de histórico com merge commit">
-                <img src="merge-commit.png" alt="Diagrama ou captura ilustrando o efeito do merge commit no histórico Git, com commit de merge e dois pais">
+            <figure class="merge-intro-illustration" role="img" aria-label="Exemplo de histórico com squash and merge">
+                <img src="merge-squash.png" alt="Diagrama ou captura ilustrando squash and merge: um único commit na main após integrar o PR">
             </figure>
         </div>
     </div>
