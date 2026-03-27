@@ -761,7 +761,15 @@ body {
     min-height: 0;
     padding-top: 20px;
     padding-bottom: 28px;
+    padding-left: 52px;
+    padding-right: 52px;
+    gap: 26px;
     align-items: stretch;
+}
+
+.slide-comparison .header {
+    padding-left: 52px;
+    padding-right: 52px;
 }
 
 .slide-comparison .column {
@@ -779,6 +787,8 @@ body {
 .slide-comparison .comparison-grid .code-block {
     flex: 1;
     min-height: 0;
+    padding-left: 28px;
+    padding-right: 28px;
     overflow-y: auto;
     overscroll-behavior: contain;
 }
@@ -902,9 +912,23 @@ body {
 }
 
 .comparison-grid .code-block {
-    min-height: 350px;
-    font-size: 20px;
-    line-height: 1.8;
+    min-height: 500px;
+    padding-top: 38px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 38px;
+    font-size: 21px;
+    line-height: 1.85;
+}
+
+.slide-comparison .bad-msg,
+.slide-comparison .good-msg {
+    margin-bottom: 1.15em;
+}
+
+.slide-comparison .bad-msg:last-child,
+.slide-comparison .good-msg:last-child {
+    margin-bottom: 0;
 }
 
 .caos-block {
@@ -1375,6 +1399,19 @@ body {
     color: #4ADE80;
     font-weight: bold;
     margin-right: 10px;
+}
+
+/* Item complementar: menos destaque que título/contexto/solução */
+.checklist-item--optional .checkbox {
+    color: #6b7c6e;
+}
+
+.checklist-item--optional .label {
+    color: #8a9b90;
+}
+
+.checklist-item--optional .description {
+    color: #7d8e82;
 }
 
 .description {
