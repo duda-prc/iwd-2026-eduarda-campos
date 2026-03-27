@@ -333,21 +333,72 @@ body {
 }
 
 .slide--conclusion .references {
-    padding-top: 40px;
-    border-top: 1px solid #333;
-    display: flex;
-    justify-content: space-around;
+    padding: 28px 48px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
 }
 
-.slide--conclusion .ref-item {
-    font-size: 18px;
-    color: #A5A5A5;
+.slide--conclusion .references__heading {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6b7c6e;
+    text-align: center;
+}
+
+.slide--conclusion .references-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.slide--conclusion .references-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 12px;
+    font-size: 16px;
+    line-height: 1.45;
+    color: #a5a5a5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 12px;
+}
+
+.slide--conclusion .references-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.slide--conclusion .ref-title {
+    flex: 1 1 200px;
+    font-weight: 700;
+    color: #c8d4cc;
+    min-width: min(100%, 200px);
 }
 
 .slide--conclusion .ref-link {
-    color: #4ADE80;
+    flex: 2 1 220px;
+    color: #4ade80;
     text-decoration: none;
+    word-break: break-word;
+}
+
+.slide--conclusion .ref-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* ——— Layouts de conteúdo ——— */
@@ -620,6 +671,11 @@ body {
     .merge-intro-body.merge-intro-body--split {
         grid-template-columns: 1fr;
     }
+
+    .slide-comunicacao-cc .conventional-commits-hero,
+    .slide-comunicacao-cc .conventional-commits-hero img {
+        max-height: min(36vh, 320px);
+    }
 }
 
 .good-practice-tracker__item .highlight {
@@ -632,6 +688,22 @@ body {
     font-size: 0.55em;
     font-weight: 400;
     color: #a5a5a5;
+}
+
+/* Slide frase final: título + citação + foto */
+.slide-final-phrase .merge-intro-body {
+    flex: 1;
+    min-height: 0;
+}
+
+.slide-final-phrase .final-phrase-copy {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.slide-final-phrase .final-phrase-copy .action-item {
+    margin-bottom: 0;
 }
 
 .content-grid--tools {
@@ -845,6 +917,16 @@ body {
     padding-top: 40px;
     padding-left: 80px;
     padding-right: 80px;
+}
+
+.content-area--resumo .action-item {
+    font-size: 24px;
+    margin-bottom: 26px;
+    line-height: 1.42;
+}
+
+.content-area--resumo .action-item:last-child {
+    margin-bottom: 0;
 }
 
 .content-body {
@@ -1167,6 +1249,25 @@ body {
     padding-top: 12px;
 }
 
+/* Slide 12: texto + banner Conventional Commits */
+.slide-comunicacao-cc .merge-intro-body {
+    flex: 1;
+    min-height: 0;
+}
+
+.slide-comunicacao-cc .conventional-commits-hero {
+    align-self: center;
+    max-height: min(52vh, 420px);
+}
+
+.slide-comunicacao-cc .conventional-commits-hero img {
+    max-height: min(52vh, 420px);
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
 .structure-box--spec {
     margin-bottom: 28px;
     padding-top: 24px;
@@ -1201,11 +1302,26 @@ body {
     margin-bottom: 12px;
 }
 
-.commit-spec-doc-link {
+.commit-spec-doc-stack {
     margin: 20px 0 0;
     padding: 0 80px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.commit-spec-doc-link {
+    margin: 0;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 17px;
+    line-height: 1.5;
+}
+
+.commit-spec-doc-label {
+    display: inline-block;
+    margin-right: 8px;
+    color: #8a9b90;
+    font-size: 15px;
 }
 
 .commit-spec-doc-link a {
