@@ -28,8 +28,8 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 21. Boas práticas de PR (introdução ao bloco de revisão)
 22. Anatomia de um Pull Request eficaz
 23. Contexto em PRs — ajude o revisor
-24. Exemplo visual — PR com bom contexto (captura de tela)
-25. Exemplo visual — PR fraco ou sem contexto (captura de tela)
+24. Exemplo visual — PR fraco ou sem contexto (captura de tela)
+25. Exemplo visual — PR com bom contexto (captura de tela)
 26. Gancho — “Bora mergear?” (antes das estratégias na main)
 27. Estratégias de merge na main — introdução (boas práticas 3/3)
 28. Squash and merge
@@ -121,8 +121,8 @@ apresentacao-commits/
 ├── 21_boas_praticas_mr_pr_intro.html     # Slide 21: Intro boas práticas de PR
 ├── 22_pr_anatomy.html                    # Slide 22: Anatomia de um PR
 ├── 23_pr_context.html                    # Slide 23: Contexto em PRs
-├── 24_pr_exemplo_bom.html                # Slide 24: Exemplo de PR com contexto (imagem)
-├── 25_pr_exemplo_ruim.html               # Slide 25: Exemplo de PR sem contexto (imagem)
+├── 24_pr_exemplo_ruim.html               # Slide 24: Exemplo de PR sem contexto (imagem)
+├── 25_pr_exemplo_bom.html                # Slide 25: Exemplo de PR com contexto (imagem)
 ├── 26_gancho_merge_strategies.html       # Slide 26: Gancho “Bora mergear?”
 ├── 27_merge_main_intro.html              # Slide 27: Merge na main (intro)
 ├── 28_merge_squash.html                  # Slide 28: Squash and merge
