@@ -36,6 +36,59 @@ body {
     margin-bottom: 10px;
 }
 
+.header--bp-anchor {
+    padding-top: 52px;
+}
+
+.good-practice-tracker {
+    margin: 0 0 10px;
+    font-size: 17px;
+    color: #a5a5a5;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+.good-practice-tracker__label {
+    color: #8a9b90;
+    margin-right: 6px;
+}
+
+.good-practice-tracker__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.35em;
+    height: 1.35em;
+    padding: 0 6px;
+    margin-right: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #1e1e1e;
+    background: #4ade80;
+    border-radius: 4px;
+}
+
+.good-practice-tracker__of {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: #6b7c6e;
+    margin-right: 8px;
+}
+
+.good-practice-tracker__sep {
+    color: #5c6b62;
+    margin: 0 6px 0 0;
+}
+
+.good-practice-tracker__item {
+    color: #c8cfc9;
+}
+
+.header--bp-anchor h2 {
+    margin-bottom: 16px;
+}
+
 .subtitle {
     color: #A5A5A5;
     font-size: 20px;
@@ -163,6 +216,23 @@ body {
     align-items: center;
 }
 
+.centered-title-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.good-practice-tracker--centered {
+    text-align: center;
+    max-width: min(720px, 92vw);
+    margin-bottom: 20px;
+    padding: 0 16px;
+}
+
 .slide--centered-title h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(40px, 5.5vw, 64px);
@@ -172,6 +242,21 @@ body {
     text-align: center;
     padding: 0 48px;
     line-height: 1.15;
+}
+
+.centered-title-stack__lede {
+    margin: 22px 0 0;
+    max-width: min(720px, 92vw);
+    font-size: clamp(17px, 2vw, 22px);
+    font-weight: 400;
+    color: #c8d4c9;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.centered-title-stack__lede .highlight {
+    color: #86efac;
+    font-weight: 700;
 }
 
 /* Barra decorativa (trilho + preenchimento); posição via -up / -down */
@@ -272,8 +357,275 @@ body {
     gap: 60px;
 }
 
+.content-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 920px;
+}
+
+.content-grid--gancho-limpeza {
+    padding-top: 28px;
+}
+
+.content-grid--gancho-limpeza .point {
+    font-size: 23px;
+    line-height: 1.48;
+    margin-bottom: 26px;
+}
+
+.point--gancho-fechamento {
+    padding-top: 8px;
+    margin-top: 8px;
+    border-top: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.content-grid--pr-intro {
+    padding-top: 24px;
+}
+
+.content-grid--pr-intro .point {
+    font-size: 23px;
+    line-height: 1.48;
+    margin-bottom: 24px;
+}
+
+.content-grid--merge-intro {
+    padding-top: 16px;
+    padding-bottom: 24px;
+}
+
+.content-grid--merge-intro .point {
+    font-size: 20px;
+    line-height: 1.45;
+    margin-bottom: 16px;
+}
+
+.merge-intro-body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-left: 80px;
+    padding-right: 80px;
+    box-sizing: border-box;
+    flex: 1;
+    min-height: 0;
+}
+
+.merge-preview-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 4px;
+}
+
+.merge-preview-card {
+    background: #2d2d2d;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    border-radius: 8px;
+    padding: 12px 14px 14px;
+    min-width: 0;
+}
+
+.merge-preview-card__title {
+    margin: 0 0 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4ade80;
+}
+
+.merge-preview-card__hint {
+    margin: 0 0 10px;
+    font-size: 12px;
+    color: #8a9b90;
+    line-height: 1.35;
+}
+
+/* Diagramas tipo git graph (estratégias de merge) */
+.merge-figure {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.merge-figure__panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: stretch;
+}
+
+.merge-graph-panel {
+    background: #1a1a1a;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    border-radius: 8px;
+    padding: 12px 14px 14px;
+    min-height: 0;
+    min-width: 0;
+}
+
+.merge-graph-panel__label {
+    margin: 0 0 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6b7c6e;
+}
+
+.merge-graph-panel__scenario {
+    margin: 0 0 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #a5a5a5;
+}
+
+.merge-graph {
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.52;
+    color: #a5a5a5;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.merge-graph--compact {
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.mg-art {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.mg-main {
+    color: #86efac;
+}
+
+.mg-feat {
+    color: #fbbf24;
+}
+
+.mg-squash {
+    color: #7dd3fc;
+    font-weight: 700;
+}
+
+.mg-merge {
+    color: #f472b6;
+    font-weight: 700;
+}
+
+.mg-rebased {
+    color: #c4b5fd;
+}
+
+.mg-tag {
+    color: #6b7c6e;
+    font-size: 0.92em;
+}
+
+/* Legenda curta dentro de diagramas de merge (passo / rótulo) */
+.mg-step {
+    color: #8a9b90;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.mg-commit {
+    color: #d4d4d4;
+    font-weight: 600;
+}
+
+.content-grid--merge-split {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+    gap: 32px;
+    padding-top: 28px;
+}
+
+.content-grid--merge-split .point {
+    font-size: 21px;
+    line-height: 1.45;
+    margin-bottom: 20px;
+}
+
+.code-terminal--merge-hint {
+    min-height: 220px;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.slide-merge .content-grid--merge-split {
+    padding-bottom: 28px;
+    flex: 1;
+    min-height: 0;
+}
+
+.slide-merge .merge-intro-body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.merge-figure--tall .merge-graph {
+    font-size: 12px;
+    line-height: 1.48;
+}
+
+@media (max-width: 1100px) {
+    .merge-preview-strip {
+        grid-template-columns: 1fr;
+    }
+}
+
+.good-practice-tracker__item .highlight {
+    color: #4ade80;
+    font-weight: 700;
+}
+
+.header-merge-sub {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55em;
+    font-weight: 400;
+    color: #a5a5a5;
+}
+
 .content-grid--tools {
     grid-template-columns: 1.2fr 0.8fr;
+}
+
+.content-grid--cleanup {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+}
+
+.content-grid--cleanup .point {
+    font-size: 22px;
+    line-height: 1.45;
+    margin-bottom: 26px;
+}
+
+.inline-git {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #7ee787;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.code-terminal--cleanup {
+    min-height: 0;
+    font-size: 15px;
+    line-height: 1.65;
 }
 
 .content-grid--with-mascot {
@@ -385,6 +737,51 @@ body {
     padding-top: 40px;
     padding-left: 80px;
     padding-right: 80px;
+}
+
+/* Slide 16: cabeçalho mais compacto + grid flexível para não cortar as caixas */
+.header--comparison {
+    padding-top: 44px;
+    padding-bottom: 0;
+}
+
+.header--bp-anchor.header--comparison {
+    padding-top: 40px;
+}
+
+.header--comparison h2 {
+    margin-bottom: 12px;
+}
+
+.slide-comparison .comparison-grid {
+    flex: 1;
+    min-height: 0;
+    padding-top: 20px;
+    padding-bottom: 28px;
+    align-items: stretch;
+}
+
+.slide-comparison .column {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+.slide-comparison .comparison-grid .column-title {
+    margin-bottom: 14px;
+    flex-shrink: 0;
+}
+
+.slide-comparison .comparison-grid .code-block {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.comparison-grid__spaced-cmd {
+    margin-top: 22px;
 }
 
 .main-content {
@@ -522,7 +919,8 @@ body {
 }
 
 .git-graph-terminal {
-    min-height: 340px;
+    min-height: 0;
+    padding-bottom: 14px;
 }
 
 .git-graph-block {
@@ -546,7 +944,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 0;
-    margin: 24px 0 0;
+    margin: 10px 0 0;
     font-size: 22px;
     line-height: 1.45;
     color: #A5A5A5;
@@ -678,6 +1076,167 @@ body {
     font-size: 18px;
 }
 
+.content-body--conventional-spec {
+    padding-top: 12px;
+}
+
+.structure-box--spec {
+    margin-bottom: 28px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.commit-spec {
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
+    line-height: 1.65;
+    color: #e0e0e0;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.commit-spec-k {
+    color: #4ade80;
+}
+
+.commit-spec-o {
+    color: #a5a5a5;
+}
+
+.commit-spec-p {
+    color: #e0e0e0;
+}
+
+.types-heading {
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+}
+
+.commit-spec-doc-link {
+    margin: 20px 0 0;
+    padding: 0 80px 32px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 17px;
+}
+
+.commit-spec-doc-link a {
+    color: #4ade80;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    word-break: break-all;
+}
+
+.commit-spec-doc-link a:hover {
+    color: #5fe099;
+}
+
+.slide-conventional-tipos .header-inline-code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85em;
+    color: #4ade80;
+    font-weight: 700;
+}
+
+.content-body--tipos-spec {
+    padding-top: 8px;
+}
+
+.tipo-spec-block {
+    padding: 0 80px;
+    max-width: 1100px;
+}
+
+.tipo-spec-point {
+    font-size: 22px;
+    line-height: 1.45;
+    margin-bottom: 22px;
+}
+
+.angular-convention-bridge {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 28px 80px 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(74, 222, 128, 0.35);
+}
+
+.angular-convention-arrow {
+    font-size: 32px;
+    color: #4ade80;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.angular-convention-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+.angular-convention-types {
+    margin: 0 80px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 24px;
+    color: #a5a5a5;
+    line-height: 1.8;
+}
+
+.type-chip {
+    color: #4ade80;
+    font-weight: 700;
+}
+
+.type-chip-sep {
+    color: #5c6b62;
+    margin: 0 4px;
+}
+
+/* ——— Exemplos de commits convencionais (slide 14) ——— */
+.slide-commit-exemplos .commit-exemplos-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 28px 80px 48px;
+    box-sizing: border-box;
+    min-height: 0;
+}
+
+.commit-exemplo-card {
+    background-color: #2d2d2d;
+    border: 1px solid rgba(74, 222, 128, 0.45);
+    border-radius: 6px;
+    padding: 18px 22px 20px;
+}
+
+.commit-exemplo-label {
+    margin: 0 0 12px;
+    font-size: 17px;
+    color: #a5a5a5;
+    letter-spacing: 0.02em;
+}
+
+.commit-exemplo-line {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 21px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.commit-exemplo-type {
+    color: #4ade80;
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.commit-exemplo-type--breaking {
+    color: #fbbf24;
+}
+
 .types-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -794,16 +1353,29 @@ body {
     color: #A5A5A5;
 }
 
-.terminal-footer {
-    margin-top: auto;
-    padding-top: 40px;
-    padding-left: 80px;
-    color: #333;
-    font-size: 18px;
+/* Rodapé estilo terminal: visível no fundo escuro + fixado na base do slide */
+.slide-container:has(.terminal-footer) .content-area {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
-.slide-container .terminal-footer {
-    padding-right: 80px;
+.terminal-footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding: 22px 80px 32px;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #4ade80;
+    border-top: 1px solid rgba(74, 222, 128, 0.28);
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.45) 100%
+    );
 }
 
 .slide--why-cc .terminal-footer {
