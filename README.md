@@ -4,25 +4,37 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 
 ## 📋 Conteúdo
 
-18 slides cobrindo:
+30 slides cobrindo:
 1. Capa
 2. Quem sou eu
 3. Expectativa da Duda no mundo tech
 4. Realidade da Duda no mundo tech
-5. Por que escrevemos código? (negócio, regras voláteis e contexto)
-6. Além do código (fechamento: história vs. implementação)
+5. Por que escrevemos código? (título)
+6. Por que escrevemos código? (negócio, regras voláteis e contexto)
 7. O código é apenas metade da história
 8. O "você do futuro" agradece
 9. Árvore Git com mensagens genéricas (`git log --graph`)
-10. O caos dos commits genéricos
-11. Conventional Commits — o padrão ouro (solução: histórico)
-12. Benefícios da adoção
-13. Exemplos: Do Caos ao Controle
-14. Ferramentas que facilitam a jornada
-15. Anatomia de um Pull Request eficaz (solução: MR/PR)
-16. Contexto em MR/PRs — ajude o revisor
-17. Pequenas mudanças, grandes impactos
-18. Conclusão e Q&A
+10. Como controlar esse caos?
+11. Boas práticas para colaboração de código
+12. Conventional Commits — o padrão ouro (formato da mensagem)
+13. Conventional Commits — tipos (`feat`/`fix` e Convenção Angular)
+14. Exemplos de commits convencionais
+15. Benefícios da adoção
+16. Exemplos: Do Caos ao Controle
+17. Gancho: padrão convencional + histórico limpo
+18. Estratégias de limpeza de commits (rebase interativo, amend)
+19. Gancho — “Bora abrir um PR?”
+20. Boas práticas de PR (introdução ao bloco de revisão)
+21. Anatomia de um Pull Request eficaz
+22. Contexto em PRs — ajude o revisor
+23. Gancho — “Bora mergear?” (antes das estratégias na main)
+24. Estratégias de merge na main — introdução (boas práticas 3/3)
+25. Squash and merge
+26. Merge commit
+27. Rebase and merge (histórico linear)
+28. Pequenas mudanças, grandes impactos
+29. Frase de fechamento — por que escrevemos código?
+30. Conclusão e Q&A
 
 ## 🚀 Como Usar Localmente
 
@@ -87,20 +99,32 @@ apresentacao-commits/
 ├── 02_about_me.html                      # Slide 2: Quem sou eu
 ├── 03_expectativa_duda_mundo_tech.html   # Slide 3: Expectativa (imagem grande)
 ├── 04_realidade_duda_mundo_tech.html     # Slide 4: Realidade (imagem grande)
-├── 05_por_que_escrevemos_codigo.html     # Slide 5: Negócio, volatilidade e contexto
-├── 06_alem_do_codigo.html                # Slide 6: História vs. implementação
+├── 05_intro_por_que_escrevemos_codigo.html # Slide 5: Título "Por que escrevemos código?"
+├── 05_por_que_escrevemos_codigo.html     # Slide 6: Negócio, volatilidade e contexto
 ├── 07_the_problem.html                   # Slide 7: O código é metade da história
 ├── 08_future_self.html                   # Slide 8: O "você do futuro"
 ├── 09_git_tree_chaos.html                # Slide 9: Árvore git / mensagens vazias
-├── 10_commit_chaos.html                  # Slide 10: Caos dos commits
-├── 11_conventional_commits_intro.html    # Slide 11: Conventional Commits
-├── 12_why_conventional_commits.html     # Slide 12: Benefícios
-├── 13_comparison_examples.html           # Slide 13: Exemplos
-├── 14_tools_and_automation.html          # Slide 14: Ferramentas
-├── 15_pr_anatomy.html                    # Slide 15: Anatomia de um PR
-├── 16_pr_context.html                    # Slide 16: Contexto em PRs
-├── 17_call_to_action.html                # Slide 17: Chamada para ação
-├── 18_conclusion_qna.html                # Slide 18: Conclusão / Q&A
+├── 10_commit_chaos.html                  # Slide 10: Como controlar esse caos?
+├── 11_boas_praticas_colaboracao_codigo.html # Slide 11: Boas práticas colaboração
+├── 12_conventional_commits_intro.html    # Slide 12: Formato Conventional Commits
+├── 13_conventional_commits_tipos.html    # Slide 13: Tipos feat/fix e Angular
+├── 14_conventional_commits_exemplos.html # Slide 14: Exemplos convencionais
+├── 15_why_conventional_commits.html      # Slide 15: Benefícios
+├── 16_comparison_examples.html           # Slide 16: Do Caos ao Controle
+├── 17_gancho_commits_padrao_limpeza.html # Slide 17: Padrão + limpeza (gancho)
+├── 18_estrategias_limpeza_commits.html   # Slide 18: Limpeza de commits
+├── 19_gancho_boas_praticas_mr_pr.html    # Slide 19: Gancho “Bora abrir um PR?”
+├── 20_boas_praticas_mr_pr_intro.html     # Slide 20: Intro boas práticas de PR
+├── 21_pr_anatomy.html                    # Slide 21: Anatomia de um PR
+├── 22_pr_context.html                    # Slide 22: Contexto em PRs
+├── 23_gancho_merge_strategies.html       # Slide 23: Gancho “Bora mergear?”
+├── 24_merge_main_intro.html              # Slide 24: Merge na main (intro)
+├── 25_merge_squash.html                  # Slide 25: Squash and merge
+├── 26_merge_commit.html                  # Slide 26: Merge commit
+├── 27_merge_rebase.html                  # Slide 27: Rebase and merge
+├── 28_call_to_action.html                # Slide 28: Chamada para ação
+├── 29_final_phrase.html                  # Slide 29: Frase de fechamento
+├── 30_conclusion_qna.html                # Slide 30: Conclusão / Q&A
 └── README.md                          # Este arquivo
 ```
 

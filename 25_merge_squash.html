@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+    <div class="slide-container slide-merge">
+        <div class="header header--bp-anchor">
+            <p class="good-practice-tracker" role="note">
+                <span class="good-practice-tracker__label">Boas práticas</span>
+                <span class="good-practice-tracker__badge" aria-hidden="true">3</span><span class="good-practice-tracker__of">/3</span>
+                <span class="good-practice-tracker__sep">·</span>
+                <span class="good-practice-tracker__item">Estratégias de merge na sua branch <span class="highlight">main</span></span>
+            </p>
+            <h2>Squash and merge</h2>
+        </div>
+        <div class="content-grid content-grid--merge-split">
+            <div class="text-section">
+                <div class="point">
+                    <span class="prompt-icon">&gt;</span>
+                    <span><span class="highlight">O que é:</span> o PR inteiro vira <span class="highlight">um único commit</span> na ponta da <span class="highlight">main</span> — você ajusta a mensagem final no botão de merge.</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">&gt;</span>
+                    <span><span class="highlight">Quando:</span> WIP e muitos commits pequenos no branch; <span class="highlight">main fina</span> e leitura rápida do que entrou por PR.</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">&gt;</span>
+                    <span><span class="highlight">Trade-off:</span> na main some o detalhe commit a commit — bom título + descrição do PR (ou corpo do squash) carregam o contexto.</span>
+                </div>
+            </div>
+            <div class="merge-figure merge-figure--tall" role="img" aria-label="Antes: três commits na feature; depois: um commit squash na main">
+                <div class="merge-figure__panels">
+                    <div class="merge-graph-panel">
+                        <p class="merge-graph-panel__label">No branch (antes)</p>
+                        <p class="merge-graph-panel__scenario"><span class="mg-step">Cenário</span> Três commits pequenos no PR; <span class="mg-main">main</span> parada em <span class="mg-commit">B</span>.</p>
+                        <pre class="merge-graph"><span class="mg-art">*</span> <span class="mg-commit">B</span>  <span class="mg-main">main</span> <span class="mg-tag">← ponta atual</span>
+<span class="mg-art">|</span><span class="mg-art">\</span>
+<span class="mg-art">|</span> <span class="mg-art">*</span> <span class="mg-commit">E</span>  <span class="mg-feat">docs: typos</span>
+<span class="mg-art">|</span> <span class="mg-art">*</span> <span class="mg-commit">D</span>  <span class="mg-feat">test(api): casos 404</span>
+<span class="mg-art">|</span> <span class="mg-art">*</span> <span class="mg-commit">C</span>  <span class="mg-feat">feat(api): rota /busca</span>
+<span class="mg-art">|</span><span class="mg-art">/</span>
+<span class="mg-art">*</span> <span class="mg-commit">A</span>  <span class="mg-tag">base comum</span></pre>
+                    </div>
+                    <div class="merge-graph-panel">
+                        <p class="merge-graph-panel__label">Na main (depois do squash)</p>
+                        <p class="merge-graph-panel__scenario"><span class="mg-step">Efeito</span> C, D e E somem como nós próprios; vira <span class="mg-squash">S</span> com mensagem que você edita no merge.</p>
+                        <pre class="merge-graph"><span class="mg-art">*</span> <span class="mg-squash">S</span>  <span class="mg-tag">feat(api): busca + testes + docs (#42)</span>
+<span class="mg-art">|</span>            <span class="mg-tag">↑ 1 commit = 1 PR inteiro</span>
+<span class="mg-art">*</span> <span class="mg-commit">B</span>  <span class="mg-main">main</span> <span class="mg-tag">← continua linear</span>
+<span class="mg-art">*</span> <span class="mg-commit">A</span></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

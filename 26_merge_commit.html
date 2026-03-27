@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+    <div class="slide-container slide-merge">
+        <div class="header header--bp-anchor">
+            <p class="good-practice-tracker" role="note">
+                <span class="good-practice-tracker__label">Boas práticas</span>
+                <span class="good-practice-tracker__badge" aria-hidden="true">3</span><span class="good-practice-tracker__of">/3</span>
+                <span class="good-practice-tracker__sep">·</span>
+                <span class="good-practice-tracker__item">Estratégias de merge na sua branch <span class="highlight">main</span></span>
+            </p>
+            <h2>Merge commit</h2>
+        </div>
+        <div class="content-grid content-grid--merge-split">
+            <div class="text-section">
+                <div class="point">
+                    <span class="prompt-icon">&gt;</span>
+                    <span><span class="highlight">O que é:</span> nasce um commit <span class="highlight">M</span> só para fechar o PR — ele tem <span class="highlight">dois pais</span> (ponta da main e ponta da feature). O trabalho do branch continua visível no grafo.</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">&gt;</span>
+                    <span><span class="highlight">Quando:</span> o time gosta de ver <span class="highlight">cada integração</span> como “caixote” no histórico e não se importa com mais ramificações no graph.</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">&gt;</span>
+                    <span><span class="highlight">Trade-off:</span> o log fica mais <span class="highlight">ramificado</span>; bisect e leitura linear podem exigir um passo a mais.</span>
+                </div>
+            </div>
+            <div class="merge-figure merge-figure--tall" role="img" aria-label="Antes: feature à frente da main; depois: merge commit M com dois pais">
+                <div class="merge-figure__panels">
+                    <div class="merge-graph-panel">
+                        <p class="merge-graph-panel__label">Antes do merge</p>
+                        <p class="merge-graph-panel__scenario"><span class="mg-step">Cenário</span> <span class="mg-main">main</span> em <span class="mg-commit">B</span>; no PR, <span class="mg-commit">C</span> e <span class="mg-commit">D</span> saem desse ponto — duas pontas até você integrar.</p>
+                        <pre class="merge-graph"><span class="mg-main">main</span>        <span class="mg-art">*</span>─── <span class="mg-commit">B</span>  <span class="mg-tag">← ponta atual</span>
+                     <span class="mg-art">|</span>
+<span class="mg-feat">feature/login</span>  <span class="mg-art">*</span>─── <span class="mg-commit">D</span>  <span class="mg-tag">← ponta do branch</span>
+                  <span class="mg-art">|</span>
+                  <span class="mg-art">*</span>─── <span class="mg-commit">C</span>  <span class="mg-tag">feat: formulário</span>
+                  <span class="mg-art">|</span>
+                  <span class="mg-art">*</span>─── <span class="mg-commit">(base em B)</span></pre>
+                    </div>
+                    <div class="merge-graph-panel">
+                        <p class="merge-graph-panel__label">Depois (commit M)</p>
+                        <p class="merge-graph-panel__scenario"><span class="mg-step">Efeito</span> Nasce <span class="mg-merge">M</span> só para fechar o PR — <span class="mg-tag">git show</span> lista dois pais: <span class="mg-commit">B</span> e <span class="mg-commit">D</span>. O “caminho” C→D continua visível.</p>
+                        <pre class="merge-graph"><span class="mg-art">*</span>   <span class="mg-merge">M</span>  <span class="mg-tag">Merge branch 'feature/login' (#42)</span>
+<span class="mg-art">|</span><span class="mg-art">\</span>          <span class="mg-tag">↑ dois pais</span>
+<span class="mg-art">|</span> <span class="mg-art">*</span> <span class="mg-commit">D</span>  <span class="mg-tag">fix: validação</span>
+<span class="mg-art">|</span> <span class="mg-art">*</span> <span class="mg-commit">C</span>
+<span class="mg-art">*</span> <span class="mg-art">/</span> <span class="mg-commit">B</span>
+<span class="mg-art">|</span>/
+<span class="mg-art">*</span> <span class="mg-commit">A</span>
+
+<span class="mg-tag">Boa para times que querem “ver o PR” no grafo após integrar.</span></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

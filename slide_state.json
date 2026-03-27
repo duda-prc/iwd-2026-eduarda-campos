@@ -3,7 +3,7 @@
     "title": "Do Caos ao Controle",
     "created": 1773019063.8545032,
     "last_updated": 1773019141.9264693,
-    "total_slides": 18
+    "total_slides": 30
   },
   "slides": [
     {
@@ -32,11 +32,6 @@
       "pageNum": 5
     },
     {
-      "id": "alem_do_codigo",
-      "state": "edited",
-      "pageNum": 6
-    },
-    {
       "id": "the_problem",
       "state": "edited",
       "pageNum": 7
@@ -57,44 +52,104 @@
       "pageNum": 10
     },
     {
-      "id": "conventional_commits_intro",
+      "id": "boas_praticas_colaboracao",
       "state": "edited",
       "pageNum": 11
     },
     {
-      "id": "why_conventional_commits",
+      "id": "conventional_commits_intro",
       "state": "edited",
       "pageNum": 12
     },
     {
-      "id": "comparison_examples",
+      "id": "conventional_commits_tipos",
       "state": "edited",
       "pageNum": 13
     },
     {
-      "id": "tools_and_automation",
+      "id": "conventional_commits_exemplos",
       "state": "edited",
       "pageNum": 14
     },
     {
-      "id": "pr_anatomy",
+      "id": "why_conventional_commits",
       "state": "edited",
       "pageNum": 15
     },
     {
-      "id": "pr_context",
+      "id": "comparison_examples",
       "state": "edited",
       "pageNum": 16
     },
     {
-      "id": "call_to_action",
+      "id": "gancho_commits_padrao_limpeza",
       "state": "edited",
       "pageNum": 17
     },
     {
-      "id": "conclusion_qna",
+      "id": "estrategias_limpeza_commits",
       "state": "edited",
       "pageNum": 18
+    },
+    {
+      "id": "gancho_boas_praticas_mr_pr",
+      "state": "edited",
+      "pageNum": 19
+    },
+    {
+      "id": "boas_praticas_mr_pr_intro",
+      "state": "edited",
+      "pageNum": 20
+    },
+    {
+      "id": "pr_anatomy",
+      "state": "edited",
+      "pageNum": 21
+    },
+    {
+      "id": "pr_context",
+      "state": "edited",
+      "pageNum": 22
+    },
+    {
+      "id": "gancho_merge_strategies",
+      "state": "edited",
+      "pageNum": 23
+    },
+    {
+      "id": "merge_main_intro",
+      "state": "edited",
+      "pageNum": 24
+    },
+    {
+      "id": "merge_squash",
+      "state": "edited",
+      "pageNum": 25
+    },
+    {
+      "id": "merge_commit",
+      "state": "edited",
+      "pageNum": 26
+    },
+    {
+      "id": "merge_rebase",
+      "state": "edited",
+      "pageNum": 27
+    },
+    {
+      "id": "call_to_action",
+      "state": "edited",
+      "pageNum": 28
+    },
+    {
+      "id": "final_phrase",
+      "state": "edited",
+      "pageNum": 29
+    },
+    {
+      "id": "conclusion_qna",
+      "state": "edited",
+      "pageNum": 30
     }
   ],
   "outline": [
@@ -134,13 +189,6 @@
       "slide_template_key": ""
     },
     {
-      "id": "alem_do_codigo",
-      "title": "Além do código",
-      "summary": "Entender o sistema não é só ler código: a história por trás das escolhas importa tanto quanto a implementação.",
-      "image_plan": "Use a suitable image if needed",
-      "slide_template_key": ""
-    },
-    {
       "id": "the_problem",
       "title": "O código é apenas metade da história",
       "summary": "Aprofunda por que o código sozinho não preserva o porquê das decisões e commits genéricos pioram isso.",
@@ -163,15 +211,36 @@
     },
     {
       "id": "commit_chaos",
-      "title": "O caos dos commits genéricos",
-      "summary": "Mostra o impacto negativo de commits como \"fix\" ou \"ajustes\" no histórico do projeto.",
+      "title": "Como controlar esse caos?",
+      "summary": "Pergunta de transição após o gráfico genérico: impactos de commits sem significado e caminho para padronização.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "boas_praticas_colaboracao",
+      "title": "Boas práticas para colaboração de código",
+      "summary": "Commits claros, PR com contexto e estratégias de merge com main.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
     {
       "id": "conventional_commits_intro",
       "title": "Conventional Commits: O padrão ouro",
-      "summary": "Introduz a especificação de Conventional Commits e sua estrutura básica.",
+      "summary": "Formato da mensagem (tipo, escopo, descrição, corpo, rodapés); link para conventionalcommits.org v1.0.0.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "conventional_commits_tipos",
+      "title": "Conventional Commits: tipos",
+      "summary": "feat e fix pela especificação; demais tipos alinhados à Convenção Angular (refactor, test, docs, chore, style, perf).",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "conventional_commits_exemplos",
+      "title": "Exemplos de commits convencionais",
+      "summary": "Sem corpo, com escopo, e breaking change (feat!) conforme a especificação.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
@@ -190,9 +259,30 @@
       "slide_template_key": ""
     },
     {
-      "id": "tools_and_automation",
-      "title": "Ferramentas que facilitam a jornada",
-      "summary": "Apresenta ferramentas como Commitizen, Husky e Semantic Release para ajudar na adoção.",
+      "id": "gancho_commits_padrao_limpeza",
+      "title": "Do padrão ao histórico limpo",
+      "summary": "Ponte entre conventional commits (o que comunicar) e limpeza do histórico (como entregar antes do merge).",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "estrategias_limpeza_commits",
+      "title": "Estratégias de limpeza de commits",
+      "summary": "Rebase interativo (squash, mensagens) e git commit --amend para o último commit antes do PR.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "gancho_boas_praticas_mr_pr",
+      "title": "Bora abrir um PR?",
+      "summary": "Gancho visual antes do bloco de boas práticas de PR (commits prontos → abrir PR).",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "boas_praticas_mr_pr_intro",
+      "title": "Boas práticas de Pull Request",
+      "summary": "Transição: pedir revisão, contexto no diff (o que, por quê, como validar); leva à anatomia do PR.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
@@ -205,8 +295,43 @@
     },
     {
       "id": "pr_context",
-      "title": "Contexto em MR/PRs: Ajude o seu revisor",
+      "title": "Contexto em PRs: Ajude o seu revisor",
       "summary": "Depois das ferramentas de commits: por que contexto na descrição do PR fecha o ciclo com o revisor.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "gancho_merge_strategies",
+      "title": "Bora mergear?",
+      "summary": "Gancho centralizado antes do bloco de estratégias de merge na main (squash, merge commit, rebase).",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "merge_main_intro",
+      "title": "Como integrar na branch principal?",
+      "summary": "Boas práticas 3/3: opções de merge na main e impacto no histórico; introduz squash, merge commit e rebase linear.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "merge_squash",
+      "title": "Squash and merge",
+      "summary": "Vários commits do branch viram um na main; trade-off de granularidade.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "merge_commit",
+      "title": "Merge commit",
+      "summary": "Commit de merge explícito na main; grafo ramificado vs unidade do PR.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "merge_rebase",
+      "title": "Rebase and merge (histórico linear)",
+      "summary": "Commits reaplicados na main sem merge commit; linearidade e cuidado com reescrita de histórico.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
@@ -214,6 +339,13 @@
       "id": "call_to_action",
       "title": "Pequenas mudanças, grandes impactos",
       "summary": "Incentiva o início imediato com pequenas ações e liderança pelo exemplo.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "final_phrase",
+      "title": "Por que escrevemos código? (fechamento)",
+      "summary": "Mensagem de impacto: resolver problemas hoje, documentar para amanhã.",
       "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
