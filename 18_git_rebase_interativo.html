@@ -13,29 +13,18 @@
                 <span class="good-practice-tracker__sep">·</span>
                 <span class="good-practice-tracker__item">Comunicação clara nos commits</span>
             </p>
-            <h2>Estratégias de limpeza de commits</h2>
+            <h2>Rebase interativo</h2>
         </div>
         <div class="content-grid content-grid--cleanup">
             <div class="text-section">
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight">Rebase interativo</span> (<code class="inline-git">git rebase -i</code>): reescrever o histórico local — juntar (<span class="highlight">squash</span>/fixup), reordenar ou editar mensagens antes de abrir o PR.</span>
-                </div>
-                <div class="point">
-                    <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight"><code class="inline-git">git commit --amend</code></span>: ajustar o <span class="highlight">último</span> commit (mensagem ou arquivos esquecidos) sem criar um commit “corrige o commit anterior”.</span>
+                    <span><span class="highlight">Rebase interativo</span> (<code class="inline-git">git rebase -i</code>) reescreve o histórico <span class="highlight">local</span>: você pode juntar commits (<span class="highlight">squash</span> / fixup), reordená-los ou editar mensagens antes de abrir o PR.</span>
                 </div>
             </div>
             <div class="code-terminal code-terminal--cleanup">
                 <div class="comment"># Rebase interativo (ex.: últimos 3 commits)</div>
                 <div><span class="cmd">git</span> rebase -i HEAD~3</div>
-                <br>
-                <div class="comment"># Corrigir mensagem ou incluir mudanças no último commit</div>
-                <div><span class="cmd">git</span> add .</div>
-                <div><span class="cmd">git</span> commit --amend --no-edit</div>
-                <br>
-                <div class="comment"># Só alterar a mensagem do último commit</div>
-                <div><span class="cmd">git</span> commit --amend</div>
             </div>
         </div>
     </div>
