@@ -826,6 +826,31 @@ body {
     justify-content: center;
 }
 
+/* ——— Lista ordenada (p.ex. boas práticas colaboração) ——— */
+.text-section--ordered {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 2.5em;
+    list-style-position: outside;
+}
+
+.text-section--ordered li {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    padding-left: 0.35em;
+}
+
+.text-section--ordered li::marker {
+    color: #4ade80;
+    font-weight: 700;
+}
+
+.text-section--ordered li:last-child {
+    margin-bottom: 0;
+}
+
 /* ——— Bullets / listas ——— */
 .point {
     display: flex;
