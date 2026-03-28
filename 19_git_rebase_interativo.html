@@ -19,12 +19,26 @@
             <div class="text-section">
                 <div class="point">
                     <span class="prompt-icon">&gt;</span>
-                    <span><span class="highlight">Rebase interativo</span> (<code class="inline-git">git rebase -i</code>) reescreve o histórico <span class="highlight">local</span>: você pode juntar commits (<span class="highlight">squash</span> / fixup), reordená-los ou editar mensagens antes de abrir o PR.</span>
+                    <span><span class="highlight">Rebase interativo</span> (<code class="inline-git">git rebase -i</code>) reescreve o histórico <span class="highlight">local</span>: você pode juntar commits (<span class="highlight">squash</span> / <span class="highlight">fixup</span>), <span class="highlight">reordenar</span>, <span class="highlight">editar mensagens</span> (<code class="inline-git">reword</code>) ou <span class="highlight">remover</span> commits (<code class="inline-git">drop</code>) antes de abrir o PR.</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">&gt;</span>
+                    <span>O Git abre um arquivo “<span class="highlight">todo</span>” com uma linha por commit e verbos (<code class="inline-git">pick</code>, <code class="inline-git">squash</code>…). Salvar e fechar o editor continua o fluxo; em <span class="highlight">squash</span> você costuma unificar a <span class="highlight">mensagem final</span> na sequência.</span>
+                </div>
+                <div class="point">
+                    <span class="prompt-icon">&gt;</span>
+                    <span>Use com prioridade em branch <span class="highlight">só sua</span> ou ainda não mergeada. Se o branch já foi <span class="highlight">empurrado</span> para o remoto, reescrever exige <span class="highlight">force-with-lease</span> e alinhamento com o time — o ideal é limpar <span class="highlight">antes do push</span>.</span>
                 </div>
             </div>
             <div class="code-terminal code-terminal--cleanup">
                 <div class="comment"># Rebase interativo (ex.: últimos 3 commits)</div>
                 <div><span class="cmd">git</span> rebase -i HEAD~3</div>
+                <br>
+                <div class="comment"># A partir de um commit base (ancestral comum)</div>
+                <div><span class="cmd">git</span> rebase -i &lt;hash-ou-main&gt;</div>
+                <br>
+                <div class="comment"># Se precisar cancelar o rebase em andamento</div>
+                <div><span class="cmd">git</span> rebase --abort</div>
             </div>
         </div>
     </div>
