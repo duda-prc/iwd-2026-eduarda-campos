@@ -4,7 +4,7 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 
 ## 📋 Conteúdo
 
-35 slides cobrindo:
+36 slides cobrindo:
 1. Capa
 2. Quem sou eu
 3. Expectativa da Duda no mundo tech
@@ -36,10 +36,11 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 29. Merge commit
 30. Squash and merge
 31. Rebase and merge (histórico linear)
-32. Resumo: o que vimos (commits, PRs, merge)
-33. Pequenas mudanças, grandes impactos
-34. Frase de fechamento — por que escrevemos código?
-35. Conclusão e Q&A
+32. Repositório real de exemplo (esta apresentação no GitHub)
+33. Resumo: o que vimos (commits, PRs, merge)
+34. Pequenas mudanças, grandes impactos
+35. Frase de fechamento — por que escrevemos código?
+36. Conclusão e Q&A
 
 ## 🚀 Como Usar Localmente
 
@@ -131,10 +132,12 @@ apresentacao-commits/
 ├── 29_merge_commit.html                  # Slide 29: Merge commit
 ├── 30_merge_squash.html                  # Slide 30: Squash and merge
 ├── 31_merge_rebase.html                  # Slide 31: Rebase and merge
-├── 32_resumo_o_que_vimos.html            # Slide 32: Resumo do que vimos
-├── 33_call_to_action.html                # Slide 33: Chamada para ação
-├── 34_final_phrase.html                  # Slide 34: Frase de fechamento
-├── 35_conclusion_qna.html                # Slide 35: Conclusão / Q&A
+├── 32_repo_exemplo_real.html             # Slide 32: Repositório real de exemplo
+├── 33_resumo_o_que_vimos.html            # Slide 33: Resumo do que vimos
+├── 34_call_to_action.html                # Slide 34: Chamada para ação
+├── 35_final_phrase.html                  # Slide 35: Frase de fechamento
+├── 36_conclusion_qna.html                # Slide 36: Conclusão / Q&A
+├── repo-example.png                      # Captura do slide 32 (repositório no GitHub)
 └── README.md                          # Este arquivo
 ```
 
