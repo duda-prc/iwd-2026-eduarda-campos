@@ -163,6 +163,17 @@ body {
     border-radius: 8px;
 }
 
+/* Slide sem título: só a imagem ocupa o viewport */
+.slide-image-only {
+    min-height: 100vh;
+}
+
+.slide-image-hero--solo {
+    flex: 1;
+    min-height: 0;
+    padding: 24px 48px 32px;
+}
+
 /* ——— Slide título (01) ——— */
 .slide--title * {
     margin: 0;
