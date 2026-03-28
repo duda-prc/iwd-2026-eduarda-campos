@@ -37,7 +37,7 @@ Uma apresentação interativa sobre Conventional Commits, Pull Requests com cont
 30. Squash and merge
 31. Rebase and merge (histórico linear)
 32. Repositório real de exemplo (esta apresentação no GitHub)
-33. Slide apenas com imagem (tela cheia)
+33. Git graph — imagem em tela cheia (`git-graph.png`)
 34. Resumo: o que vimos (commits, PRs, merge)
 35. Pequenas mudanças, grandes impactos
 36. Frase de fechamento — por que escrevemos código?
@@ -134,13 +134,13 @@ apresentacao-commits/
 ├── 30_merge_squash.html                  # Slide 30: Squash and merge
 ├── 31_merge_rebase.html                  # Slide 31: Rebase and merge
 ├── 32_repo_exemplo_real.html             # Slide 32: Repositório real de exemplo
-├── 33_slide_apenas_imagem.html           # Slide 33: Só imagem (veja 33_slide_imagem.png)
+├── 33_slide_apenas_imagem.html           # Slide 33: Git graph (git-graph.png)
 ├── 34_resumo_o_que_vimos.html            # Slide 34: Resumo do que vimos
 ├── 35_call_to_action.html                # Slide 35: Chamada para ação
 ├── 36_final_phrase.html                  # Slide 36: Frase de fechamento
 ├── 37_conclusion_qna.html                # Slide 37: Conclusão / Q&A
 ├── repo-example.png                      # Captura do slide 32 (repositório no GitHub)
-├── 33_slide_imagem.png                   # Imagem do slide 33 (adicione este arquivo)
+├── git-graph.png                         # Imagem do slide 33 (histórico Git)
 └── README.md                          # Este arquivo
 ```
 
