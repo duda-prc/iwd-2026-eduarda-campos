@@ -1,0 +1,52 @@
+// Ordem, título e links "veja na prática" de cada slide.
+// Para adicionar um slide: crie o .html nesta pasta e acrescente uma linha aqui, na posição certa.
+const REPO = "https://github.com/duda-prc/iwd-2026-eduarda-campos";
+
+const PRATICA = {
+  commits: { texto: "Commits convencionais deste repositório", url: `${REPO}/commits/main` },
+  pr1: { texto: "PR #1: descrição com contexto", url: `${REPO}/pull/1` },
+  pr3: { texto: "PR #3: entrou com merge commit", url: `${REPO}/pull/3` },
+  pr4: { texto: "PR #4: entrou com squash and merge", url: `${REPO}/pull/4` },
+  pr5: { texto: "PR #5: entrou com rebase and merge", url: `${REPO}/pull/5` },
+  repo: { texto: "O repositório desta apresentação", url: REPO },
+};
+
+window.SLIDES = [
+  { arquivo: "01_title_slide.html", titulo: "Do Caos ao Controle" },
+  { arquivo: "02_about_me.html", titulo: "Quem sou eu" },
+  { arquivo: "03_expectativa_duda_mundo_tech.html", titulo: "Expectativa no mundo tech" },
+  { arquivo: "04_realidade_duda_mundo_tech.html", titulo: "Realidade no mundo tech" },
+  { arquivo: "05_intro_por_que_escrevemos_codigo.html", titulo: "Por que escrevemos código?" },
+  { arquivo: "06_por_que_escrevemos_codigo.html", titulo: "Negócio, regras voláteis e contexto" },
+  { arquivo: "07_the_problem.html", titulo: "O código é só metade da história" },
+  { arquivo: "08_future_self.html", titulo: "O você do futuro agradece" },
+  { arquivo: "09_git_tree_chaos.html", titulo: "Árvore Git com mensagens genéricas" },
+  { arquivo: "10_commit_chaos.html", titulo: "Como controlar esse caos?" },
+  { arquivo: "11_boas_praticas_colaboracao_codigo.html", titulo: "Boas práticas de colaboração" },
+  { arquivo: "12_comunicacao_clara_commits.html", titulo: "Comunicação clara nos commits" },
+  { arquivo: "13_conventional_commits_intro.html", titulo: "Conventional Commits: o formato", pratica: [PRATICA.commits] },
+  { arquivo: "14_conventional_commits_tipos.html", titulo: "Conventional Commits: os tipos", pratica: [PRATICA.commits] },
+  { arquivo: "15_conventional_commits_exemplos.html", titulo: "Exemplos de commits convencionais", pratica: [PRATICA.commits] },
+  { arquivo: "16_why_conventional_commits.html", titulo: "Benefícios da adoção" },
+  { arquivo: "17_comparison_examples.html", titulo: "Exemplos: do caos ao controle" },
+  { arquivo: "18_gancho_commits_padrao_limpeza.html", titulo: "Padrão convencional + histórico limpo" },
+  { arquivo: "19_git_rebase_interativo.html", titulo: "Rebase interativo" },
+  { arquivo: "20_git_commit_amend.html", titulo: "git commit --amend" },
+  { arquivo: "21_gancho_boas_praticas_mr_pr.html", titulo: "Bora abrir um PR?" },
+  { arquivo: "22_boas_praticas_mr_pr_intro.html", titulo: "Boas práticas de PR" },
+  { arquivo: "23_pr_anatomy.html", titulo: "Anatomia de um PR eficaz", pratica: [PRATICA.pr1] },
+  { arquivo: "24_pr_context.html", titulo: "Contexto em PRs: ajude quem revisa", pratica: [PRATICA.pr1] },
+  { arquivo: "25_pr_exemplo_ruim.html", titulo: "Exemplo: PR sem contexto" },
+  { arquivo: "26_pr_exemplo_bom.html", titulo: "Exemplo: PR com contexto", pratica: [PRATICA.pr1] },
+  { arquivo: "27_gancho_merge_strategies.html", titulo: "Bora mergear?" },
+  { arquivo: "28_merge_main_intro.html", titulo: "Estratégias de merge na main" },
+  { arquivo: "29_merge_commit.html", titulo: "Merge commit", pratica: [PRATICA.pr3] },
+  { arquivo: "30_merge_squash.html", titulo: "Squash and merge", pratica: [PRATICA.pr4] },
+  { arquivo: "31_merge_rebase.html", titulo: "Rebase and merge", pratica: [PRATICA.pr5] },
+  { arquivo: "32_repo_exemplo_real.html", titulo: "Um repositório real de exemplo", pratica: [PRATICA.repo] },
+  { arquivo: "33_slide_apenas_imagem.html", titulo: "O histórico deste repositório", pratica: [PRATICA.commits] },
+  { arquivo: "34_resumo_o_que_vimos.html", titulo: "Resumo: o que vimos" },
+  { arquivo: "35_call_to_action.html", titulo: "Pequenas mudanças, grandes impactos" },
+  { arquivo: "36_final_phrase.html", titulo: "Por que escrevemos código?" },
+  { arquivo: "37_conclusion_qna.html", titulo: "Conclusão e perguntas" },
+];
