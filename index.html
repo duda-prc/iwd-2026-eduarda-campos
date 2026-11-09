@@ -3,204 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do Caos ao Controle - Apresentação</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <title>Do Caos ao Controle · Commits, PRs e contexto no Git</title>
+    <meta name="description" content="Apresentação de Eduarda Campos no IWD 2026 sobre Conventional Commits, Pull Requests com contexto e estratégias de merge. Com exemplos reais neste repositório.">
+    <meta name="author" content="Eduarda Campos">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Do Caos ao Controle: Commits, PRs e contexto no Git">
+    <meta property="og:description" content="Conventional Commits, PRs com contexto e estratégias de merge, com exemplos reais no repositório. IWD 2026 · Eduarda Campos.">
+    <meta property="og:image" content="https://duda-prc.github.io/iwd-2026-eduarda-campos/assets/img/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1E1E1E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E1E1E'/%3E%3Ccircle cx='10' cy='22' r='4' fill='%234ADE80'/%3E%3Ccircle cx='22' cy='10' r='4' fill='%234ADE80'/%3E%3Cpath d='M10 18V12a2 2 0 0 1 2-2h6' stroke='%234ADE80' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
+        :root {
+            --bg: #161616;
+            --surface: #1E1E1E;
+            --panel: #2D2D2D;
+            --line: #333;
+            --text: #E0E0E0;
+            --muted: #A5A5A5;
+            --green: #4ADE80;
+            --green-hover: #5FE099;
+            --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+            --display: 'Space Grotesk', system-ui, sans-serif;
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; height: 100%; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--mono);
+            display: flex;
+            flex-direction: column;
             overflow: hidden;
         }
-        body {
-            background-color: #1E1E1E;
-            color: #E0E0E0;
-            font-family: 'IBM Plex Mono', monospace;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 0;
-            box-sizing: border-box;
-            height: 100vh;
-        }
-        .container-wrapper {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            align-items: center;
-            box-sizing: border-box;
-            padding: 28px 32px 0;
-        }
-        .presentation-container {
-            width: 100%;
+
+        /* ——— Palco: o slide é sempre 1280×720 e só escala para caber ——— */
+        .stage {
             flex: 1;
-            max-width: 1280px;
-            border: 2px solid #4ADE80;
+            min-height: 0;
+            min-width: 0;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            padding: 16px;
+        }
+        .frame-box {
+            position: relative;
+            border: 2px solid var(--green);
             box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
-            display: flex;
+            overflow: hidden;
+            background: var(--surface);
         }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .frame-box iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 1280px; height: 720px;
+            border: 0;
+            transform-origin: 0 0;
         }
-        .bottom-section {
-            width: 100%;
-            background-color: #1E1E1E;
-            display: flex;
-            flex-direction: column;
+
+        /* ——— Barra de controles ——— */
+        .bar {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr) auto;
             align-items: center;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            gap: 12px;
+            padding: 10px max(16px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-right));
+            background: var(--panel);
+            border-top: 1px solid var(--line);
         }
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1280px;
-            padding: 15px 20px;
-            background-color: #2D2D2D;
-            border: 1px solid #333;
-            box-sizing: border-box;
+        .progress { position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--line); }
+        .progress span { display: block; height: 100%; background: var(--green); transition: width .2s; }
+        .bar-wrap { position: relative; min-width: 0; width: 100%; }
+        .nav, .tools { display: flex; gap: 8px; align-items: center; }
+        .center { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; }
+        .counter { font-family: var(--display); color: var(--muted); font-size: 15px; font-variant-numeric: tabular-nums; }
+        .counter b { color: var(--text); }
+        .slide-title { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+        .pratica { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+        .pratica a {
+            font-size: 12px; color: var(--green); text-decoration: none;
+            border: 1px solid rgba(74, 222, 128, .45); padding: 2px 8px; border-radius: 999px;
         }
-        .control-button {
-            background-color: #4ADE80;
-            color: #1E1E1E;
-            border: none;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-family: 'IBM Plex Mono', monospace;
-            cursor: pointer;
-            font-weight: bold;
+        .pratica a:hover, .pratica a:focus-visible { background: rgba(74, 222, 128, .12); }
+        button, .icon-link {
+            font-family: var(--mono); font-size: 14px; font-weight: 700;
+            border: 0; cursor: pointer; padding: 9px 16px;
+            background: var(--green); color: var(--surface); text-decoration: none;
+            display: inline-flex; align-items: center; gap: 6px;
         }
-        .control-button:hover {
-            background-color: #5FE099;
+        button:hover { background: var(--green-hover); }
+        button:disabled { background: #555; color: #999; cursor: not-allowed; }
+        .ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); padding: 8px 12px; }
+        .ghost:hover { background: var(--surface); color: var(--text); }
+        :focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+        /* ——— Índice ——— */
+        .indice[hidden] { display: none; }
+        .indice {
+            position: fixed; inset: 0; z-index: 10;
+            background: rgba(10, 10, 10, .85);
+            display: grid; place-items: center; padding: 24px 16px;
         }
-        .control-button:disabled {
-            background-color: #555;
-            color: #999;
-            cursor: not-allowed;
+        .indice-box {
+            width: min(720px, 100%); max-height: 100%; overflow: auto;
+            background: var(--surface); border: 2px solid var(--green); padding: 20px 24px;
         }
-        .slide-counter {
-            font-size: 16px;
-            color: #A5A5A5;
-            font-family: 'Space Grotesk', sans-serif;
+        .indice h2 { font-family: var(--display); color: var(--green); margin: 0 0 4px; font-size: 26px; }
+        .indice p { margin: 0 0 16px; color: var(--muted); font-size: 13px; }
+        .indice ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+        .indice li a {
+            display: grid; grid-template-columns: 2.2em 1fr auto; gap: 8px; align-items: baseline;
+            padding: 6px 8px; color: var(--text); text-decoration: none; font-size: 14px;
         }
-        .keyboard-hint {
-            margin-top: 8px;
-            text-align: center;
-            color: #A5A5A5;
-            font-size: 13px;
+        .indice li a:hover, .indice li a:focus-visible { background: var(--panel); }
+        .indice li a[aria-current="true"] { color: var(--green); }
+        .indice .num { color: var(--muted); font-variant-numeric: tabular-nums; }
+        .indice .tag { font-size: 11px; color: var(--green); }
+
+        /* Celular: some o texto dos botões, fica só a seta */
+        @media (max-width: 640px) {
+            .label, .slide-title, #fullBtn { display: none; }
+            .bar { gap: 8px; }
+            .pratica a { font-size: 11px; }
+            button, .icon-link { padding: 9px 12px; }
+            .stage { padding: 8px; }
         }
-        .keyboard-hint span {
-            color: #4ADE80;
-            font-weight: bold;
-        }
+        @media (prefers-reduced-motion: reduce) { .progress span { transition: none; } }
+        :fullscreen .bar-wrap { display: none; }
     </style>
 </head>
 <body>
-    <div class="container-wrapper">
-        <div class="presentation-container">
-            <iframe id="slideFrame" src="01_title_slide.html"></iframe>
+    <main class="stage" id="stage">
+        <div class="frame-box" id="frameBox">
+            <iframe id="slideFrame" title="Slide atual"></iframe>
         </div>
+    </main>
 
-        <div class="bottom-section">
-            <div class="controls">
-                <button class="control-button" id="prevBtn" onclick="previousSlide()">← Anterior</button>
-                <div class="slide-counter">
-                    <span id="currentSlide">1</span> / <span id="totalSlides">37</span>
-                </div>
-                <button class="control-button" id="nextBtn" onclick="nextSlide()">Próximo →</button>
+    <div class="bar-wrap">
+        <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+        <nav class="bar" aria-label="Navegação dos slides">
+            <div class="nav">
+                <button id="prevBtn" aria-label="Slide anterior">← <span class="label">Anterior</span></button>
             </div>
+            <div class="center">
+                <div class="counter" aria-live="polite"><b id="currentSlide">1</b> / <span id="totalSlides">37</span></div>
+                <div class="slide-title" id="slideTitle"></div>
+                <div class="pratica" id="pratica"></div>
+            </div>
+            <div class="tools">
+                <button class="ghost" id="indiceBtn" aria-haspopup="dialog" title="Índice (tecla O)">☰ <span class="label">Índice</span></button>
+                <button class="ghost" id="fullBtn" title="Tela cheia (tecla F)">⛶ <span class="label">Tela cheia</span></button>
+                <button id="nextBtn" aria-label="Próximo slide"><span class="label">Próximo</span> →</button>
+            </div>
+        </nav>
+    </div>
 
-            <div class="keyboard-hint">
-                Use as setas <span>← →</span> do teclado ou clique nos botões para navegar
-            </div>
+    <div class="indice" id="indice" role="dialog" aria-modal="true" aria-labelledby="indiceTitulo" hidden>
+        <div class="indice-box">
+            <h2 id="indiceTitulo">Índice</h2>
+            <p>Clique para ir direto ao slide. <kbd>Esc</kbd> fecha. Os marcados com <span style="color:var(--green)">↗ na prática</span> têm exemplo real no repositório.</p>
+            <ol id="indiceLista"></ol>
         </div>
     </div>
 
+    <script src="slides/slides.js"></script>
     <script>
-        const slides = [
-            '01_title_slide.html',
-            '02_about_me.html',
-            '03_expectativa_duda_mundo_tech.html',
-            '04_realidade_duda_mundo_tech.html',
-            '05_intro_por_que_escrevemos_codigo.html',
-            '05_por_que_escrevemos_codigo.html',
-            '07_the_problem.html',
-            '08_future_self.html',
-            '09_git_tree_chaos.html',
-            '10_commit_chaos.html',
-            '11_boas_praticas_colaboracao_codigo.html',
-            '12_comunicacao_clara_commits.html',
-            '13_conventional_commits_intro.html',
-            '14_conventional_commits_tipos.html',
-            '15_conventional_commits_exemplos.html',
-            '16_why_conventional_commits.html',
-            '17_comparison_examples.html',
-            '18_gancho_commits_padrao_limpeza.html',
-            '19_git_rebase_interativo.html',
-            '20_git_commit_amend.html',
-            '21_gancho_boas_praticas_mr_pr.html',
-            '22_boas_praticas_mr_pr_intro.html',
-            '23_pr_anatomy.html',
-            '24_pr_context.html',
-            '25_pr_exemplo_ruim.html',
-            '26_pr_exemplo_bom.html',
-            '27_gancho_merge_strategies.html',
-            '28_merge_main_intro.html',
-            '29_merge_commit.html',
-            '30_merge_squash.html',
-            '31_merge_rebase.html',
-            '32_repo_exemplo_real.html',
-            '33_slide_apenas_imagem.html',
-            '34_resumo_o_que_vimos.html',
-            '35_call_to_action.html',
-            '36_final_phrase.html',
-            '37_conclusion_qna.html'
-        ];
+        const slides = window.SLIDES;
+        const total = slides.length;
+        const $ = (id) => document.getElementById(id);
+        const frame = $('slideFrame');
+        let atual = 0;
 
-        let currentSlideIndex = 0;
-
-        function updateSlide() {
-            const frame = document.getElementById('slideFrame');
-            frame.src = slides[currentSlideIndex];
-            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
-            document.getElementById('prevBtn').disabled = currentSlideIndex === 0;
-            document.getElementById('nextBtn').disabled = currentSlideIndex === slides.length - 1;
+        // ——— O slide é renderizado em 1280×720 e escalado para caber no palco ———
+        function encaixar() {
+            const stage = $('stage');
+            const estilo = getComputedStyle(stage);
+            const livreL = Math.min(stage.clientWidth, window.innerWidth) - parseFloat(estilo.paddingLeft) - parseFloat(estilo.paddingRight) - 4;
+            const livreA = stage.clientHeight - parseFloat(estilo.paddingTop) - parseFloat(estilo.paddingBottom) - 4;
+            const escala = Math.max(0.1, Math.min(livreL / 1280, livreA / 720));
+            $('frameBox').style.width = Math.floor(1280 * escala) + 'px';
+            $('frameBox').style.height = Math.floor(720 * escala) + 'px';
+            frame.style.transform = `scale(${escala})`;
         }
 
-        function nextSlide() {
-            if (currentSlideIndex < slides.length - 1) {
-                currentSlideIndex++;
-                updateSlide();
-            }
+        // ——— Endereço: #12 abre o slide 12 (dá pra mandar o link de um slide) ———
+        function indiceDoHash() {
+            const n = parseInt(location.hash.slice(1), 10);
+            return Number.isInteger(n) && n >= 1 && n <= total ? n - 1 : 0;
         }
 
-        function previousSlide() {
-            if (currentSlideIndex > 0) {
-                currentSlideIndex--;
-                updateSlide();
-            }
+        function mostrar(i) {
+            atual = Math.max(0, Math.min(total - 1, i));
+            const s = slides[atual];
+            frame.src = 'slides/' + s.arquivo;
+            $('currentSlide').textContent = atual + 1;
+            $('slideTitle').textContent = s.titulo;
+            document.title = `${s.titulo} · Do Caos ao Controle`;
+            $('progress').style.width = ((atual + 1) / total * 100) + '%';
+            $('prevBtn').disabled = atual === 0;
+            $('nextBtn').disabled = atual === total - 1;
+            $('pratica').innerHTML = (s.pratica || [])
+                .map(p => `<a href="${p.url}" target="_blank" rel="noopener">↗ ${p.texto}</a>`).join('');
+            document.querySelectorAll('#indiceLista a').forEach((a, j) =>
+                a.setAttribute('aria-current', j === atual ? 'true' : 'false'));
+            const alvo = '#' + (atual + 1);
+            if (location.hash !== alvo) history.replaceState(null, '', alvo);
         }
 
-        // Navegação por teclado
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowRight') {
-                nextSlide();
-            } else if (event.key === 'ArrowLeft') {
-                previousSlide();
-            }
+        const ir = (i) => { if (i !== atual && i >= 0 && i < total) mostrar(i); };
+        const proximo = () => ir(atual + 1);
+        const anterior = () => ir(atual - 1);
+
+        // ——— Índice ———
+        $('indiceLista').innerHTML = slides.map((s, i) =>
+            `<li><a href="#${i + 1}" data-i="${i}"><span class="num">${String(i + 1).padStart(2, '0')}</span>` +
+            `<span>${s.titulo}</span><span class="tag">${s.pratica ? '↗ na prática' : ''}</span></a></li>`).join('');
+        $('indiceLista').addEventListener('click', (e) => {
+            const a = e.target.closest('a');
+            if (!a) return;
+            e.preventDefault();
+            ir(Number(a.dataset.i));
+            fecharIndice();
+        });
+        function abrirIndice() {
+            $('indice').hidden = false;
+            const marcado = document.querySelector('#indiceLista a[aria-current="true"]');
+            (marcado || $('indiceLista').querySelector('a')).focus();
+        }
+        function fecharIndice() { $('indice').hidden = true; $('indiceBtn').focus(); }
+        $('indice').addEventListener('click', (e) => { if (e.target === $('indice')) fecharIndice(); });
+
+        // ——— Tela cheia ———
+        function telaCheia() {
+            if (document.fullscreenElement) document.exitFullscreen();
+            else document.documentElement.requestFullscreen?.().catch(() => {});
+        }
+
+        // ——— Teclado (funciona também com o foco dentro do slide) ———
+        function tecla(e) {
+            if (e.metaKey || e.ctrlKey || e.altKey) return;
+            const indiceAberto = !$('indice').hidden;
+            if (indiceAberto) { if (e.key === 'Escape' || e.key === 'o') { e.preventDefault(); fecharIndice(); } return; }
+            const acoes = {
+                ArrowRight: proximo, PageDown: proximo, ' ': proximo,
+                ArrowLeft: anterior, PageUp: anterior,
+                Home: () => ir(0), End: () => ir(total - 1),
+                f: telaCheia, o: abrirIndice,
+            };
+            const acao = acoes[e.key];
+            if (acao) { e.preventDefault(); acao(); }
+        }
+        // ——— Toque: arrastar para o lado troca de slide ———
+        // (o toque em cima do slide vai para o documento do iframe, então liga nos dois)
+        let toqueX = null;
+        const inicioToque = (e) => { toqueX = e.touches[0].clientX; };
+        const fimToque = (e) => {
+            if (toqueX === null) return;
+            const dx = e.changedTouches[0].clientX - toqueX;
+            if (Math.abs(dx) > 50) (dx < 0 ? proximo : anterior)();
+            toqueX = null;
+        };
+        function ligarGestos(doc) {
+            doc.addEventListener('keydown', tecla);
+            doc.addEventListener('touchstart', inicioToque, { passive: true });
+            doc.addEventListener('touchend', fimToque);
+        }
+        document.addEventListener('touchstart', inicioToque, { passive: true });
+        document.addEventListener('touchend', fimToque);
+        frame.addEventListener('load', () => {
+            try { ligarGestos(frame.contentDocument); } catch (_) { /* file:// bloqueia; use um servidor local */ }
         });
 
-        // Inicializar
-        document.getElementById('totalSlides').textContent = slides.length;
-        updateSlide();
+        document.addEventListener('keydown', tecla);
+        $('prevBtn').addEventListener('click', anterior);
+        $('nextBtn').addEventListener('click', proximo);
+        $('indiceBtn').addEventListener('click', abrirIndice);
+        $('fullBtn').addEventListener('click', telaCheia);
+        window.addEventListener('hashchange', () => ir(indiceDoHash()));
+        window.addEventListener('resize', encaixar);
+        document.addEventListener('fullscreenchange', encaixar);
+
+        $('totalSlides').textContent = total;
+        encaixar();
+        mostrar(indiceDoHash());
     </script>
 </body>
 </html>
